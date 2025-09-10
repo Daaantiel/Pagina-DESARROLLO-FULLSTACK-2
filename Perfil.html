@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Perfil - Pastelería Mil Sabores</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #FFF5E1;
+  color: #5D4037;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: linear-gradient( #8B4513, #5D4037);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+}
+
+nav {
+  background: linear-gradient(#FFC0CB, #FFF5E1);
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #5D4037;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 500px;
+  margin: 30px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1em;
+}
+
+button {
+  background: #FFC0CB;
+  color: #5D4037;
+  padding: 10px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+button:hover {
+  background: #ff9bb5;
+}
+
+#mensajePerfil {
+  text-align: center;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #8B4513;
+}
+
+  </style>
+
+  <body>
+
+  <header>
+    <h1>Mi Perfil</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="catalogo.html">Catálogo</a>
+      <a href="carrito.html">Carrito</a>
+      <a href="NuevoLogin.html">Cerrar Sesión</a>
+    </nav>
+  </header>
+
+  <main>
+    <form onsubmit="guardarPerfil(event)">
+      <label>Nombre completo</label>
+      <input type="text" id="perfilNombre" value="Agustin Caceres">
+
+      <label>Correo</label>
+      <input type="email" id="perfilEmail" value="agu.caceres@duocuc.cl">
+
+      <label>Contraseña</label>
+      <input type="password" id="perfilPassword" value="123456">
+
+      <label>Edad</label>
+      <input type="number" id="perfilEdad" value="20">
+
+      <label>Preferencia de tortas</label>
+      <select id="perfilPreferencia">
+        <option value="cuadradas">Tortas Cuadradas</option>
+        <option value="circulares">Tortas Circulares</option>
+        <option value="postres">Postres Individuales</option>
+        <option value="tradicional">Pasteleria Tradicional</option>
+      </select>
+
+      <button type="submit">Guardar Cambios</button>
+    </form>
+
+    <p id="mensajePerfil"></p>
+  </main>
+
+  <script>
+    function guardarPerfil(e) {
+      e.preventDefault();
+
+      const nombre = document.getElementById("perfilNombre").value;
+      const email = document.getElementById("perfilEmail").value;
+      const pass = document.getElementById("perfilPassword").value;
+      const edad = document.getElementById("perfilEdad").value;
+      const pref = document.getElementById("perfilPreferencia").value;
+
+   
+      document.getElementById("mensajePerfil").innerText =
+        "Perfil actualizado";
+    }
+  </script>
+
+</body>
+</html>
+
+
+
+  </body>
+  </html>
