@@ -1,79 +1,101 @@
-
+/* ===========================
+   ESTILOS GENERALES
+   =========================== */
 body {
-  font-family: 'Lato', sans-serif;
-  background-color: #FFF5E1;
-  color: #5D4037;
-  margin: 0;
-  padding: 0;
+  font-family: 'Lato', sans-serif; /* Fuente principal legible */
+  background-color: #FFF5E1; /* Fondo color crema claro */
+  color: #5D4037; /* Color de texto marrón oscuro */
+  margin: 0; /* Sin margen por defecto */
+  padding: 0; /* Sin padding por defecto */
 }
 
+/* ===========================
+   FUENTES PARA TITULOS
+   =========================== */
 h1,h2,h3,h4,h5,h6 {
-    
-  font-family: "Pacifico", cursive;
-  font-weight: 400;
-  font-style: normal;
+  font-family: "Pacifico", cursive; /* Fuente decorativa */
+  font-weight: 400; /* Peso normal */
+  font-style: normal; /* Sin cursiva */
 }
 
-  header {
-  background: linear-gradient( #8B4513, #5D4037);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-  color: white;
-  padding: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+/* ===========================
+   HEADER (ENCABEZADO)
+   =========================== */
+header {
+  background: linear-gradient(#8B4513, #5D4037); /* Degradado marrón */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+  color: white; /* Color de texto */
+  padding: 15px; /* Espaciado interno */
+  display: flex; /* Layout flexible */
+  justify-content: space-between; /* Espacio entre elementos */
+  align-items: center; /* Centrado vertical */
+  flex-wrap: wrap; /* Permite que elementos bajen a otra línea si es necesario */
 }
 
+/* ===========================
+   LOGO
+   =========================== */
 .logo {
-    display: flex;
-    align-items: center;
+  display: flex; /* Layout flexible */
+  align-items: center; /* Centrado vertical */
 }
 
 .logo img {
-    border-radius: 70px;
-    height: 50px;
-    margin-right: 10px;
+  border-radius: 70px; /* Bordes redondeados (casi circulares) */
+  height: 50px; /* Altura del logo */
+  margin-right: 10px; /* Separación con el texto */
 }
 
 .nombre-empresa {
-  font-family: 'Pacifico', cursive;
-  font-size: 1.5em;
+  font-family: 'Pacifico', cursive; /* Fuente decorativa */
+  font-size: 1.5em; /* Tamaño del texto */
 }
 
+/* ===========================
+   NAVEGACIÓN
+   =========================== */
 nav {
-  display: flex;
-  gap: 15px;
-  align-items: center;
+  display: flex; /* Layout flexible */
+  gap: 15px; /* Separación entre links */
+  align-items: center; /* Centrado vertical */
 }
 
 nav a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
+  text-decoration: none; /* Sin subrayado */
+  color: white; /* Color de link */
+  font-weight: bold; /* Texto en negrita */
 }
 
 nav a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Subrayado al pasar cursor */
 }
 
+/* ===========================
+   FOOTER - IMAGEN
+   =========================== */
 footer img {
-    position: relative;
-    left: 0;
-    width: 228px;
-    height: 130px;
-    border-top-right-radius: 1rem;
-    border-top-left-radius: 1rem;
+  position: relative; /* Posicionamiento relativo dentro del footer */
+  left: 0; /* Se mantiene al borde izquierdo */
+  width: 228px; /* Ancho de la imagen */
+  height: 130px; /* Alto de la imagen */
+  border-top-right-radius: 1rem; /* Bordes superiores redondeados */
+  border-top-left-radius: 1rem; /* Bordes superiores redondeados */
 }
 
+/* ===========================
+   MAIN - IMAGEN PRINCIPAL
+   =========================== */
 main img {
-    position: left;
-    padding-top: 5em;
-    padding-left: 0.5em;
-    width: 400px;
-    border-radius: 1rem;
+  padding-top: 5em; /* Separación superior */
+  padding-left: 0.5em; /* Separación izquierda */
+  width: 400px; /* Ancho de la imagen */
+  border-radius: 1rem; /* Bordes redondeados */
+  /* Nota: 'position: left' no existe, se recomienda usar float o flex/grid */
 }
 
+/* ===========================
+   CONTENEDOR DETALLE PRODUCTO
+   =========================== */
 #contenedor-detalle-p {
-    position: right;
+  /* Nota: 'position: right' no existe, usar flexbox, grid o float */
 }
