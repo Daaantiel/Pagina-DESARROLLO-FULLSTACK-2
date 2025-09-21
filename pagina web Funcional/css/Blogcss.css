@@ -1,155 +1,176 @@
-  
-
-  body {
-  font-family: 'Lato', sans-serif;
-  background-color: #FFF5E1;
-  color: #5D4037;
-  margin: 0;
-  padding: 0;
+/* ===========================
+   ESTILOS GENERALES DEL BODY
+   =========================== */
+body {
+  font-family: 'Lato', sans-serif; /* Fuente principal del sitio */
+  background-color: #FFF5E1; /* Color de fondo principal */
+  color: #5D4037; /* Color de texto por defecto */
+  margin: 0; /* Elimina margen por defecto del navegador */
+  padding: 0; /* Elimina padding por defecto */
 }
 
+/* ===========================
+   HEADER (ENCABEZADO)
+   =========================== */
 header {
-  background: linear-gradient( #8B4513, #5D4037);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-  color: white;
-  padding: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  background: linear-gradient(#8B4513, #5D4037); /* Degradado de marrón */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
+  color: white; /* Color de texto */
+  padding: 15px; /* Espacio interno */
+  display: flex; /* Layout flexible */
+  justify-content: space-between; /* Espacio entre elementos */
+  align-items: center; /* Centrar verticalmente */
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas si es necesario */
 }
 
+/* ===========================
+   LOGO DE LA EMPRESA
+   =========================== */
 .logo {
-  display: flex;
-  align-items: center;
+  display: flex; /* Layout flexible para alinear logo e texto */
+  align-items: center; /* Centrado vertical */
 }
 
 .logo img {
-  width: 50px;
-  margin-right: 10px;
-  border-radius: 50%;
+  width: 50px; /* Tamaño del logo */
+  margin-right: 10px; /* Espacio entre logo y nombre */
+  border-radius: 50%; /* Logo redondeado */
 }
 
 .nombre-empresa {
-  font-family: 'Pacifico', cursive;
-  font-size: 1.5em;
+  font-family: 'Pacifico', cursive; /* Fuente decorativa para el nombre */
+  font-size: 1.5em; /* Tamaño del texto */
 }
 
-/* Navegación */
+/* ===========================
+   NAVEGACIÓN
+   =========================== */
 nav {
-  display: flex;
-  gap: 15px;
-  align-items: center;
+  display: flex; /* Layout flexible para los links */
+  gap: 15px; /* Espacio entre links */
+  align-items: center; /* Centrado vertical */
 }
 
 nav a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
+  text-decoration: none; /* Quita subrayado */
+  color: white; /* Color de links */
+  font-weight: bold; /* Texto en negrita */
 }
 
 nav a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Subrayado al pasar el cursor */
 }
 
+/* Estilo global para todos los links */
 a {
-    text-decoration: none;
-    color: #FFC0CB;
+  text-decoration: none; /* Sin subrayado */
+  color: #FFC0CB; /* Color rosa */
 }
 
+/* ===========================
+   ESTILOS GENERALES DE HTML Y BODY
+   =========================== */
 html, body {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    background: #FFF5E1;
-    color: #48312a;
+  height: 100%; /* Ocupa toda la altura de la ventana */
+  margin: 0; /* Elimina margen por defecto */
+  display: flex; /* Layout flexible */
+  flex-direction: column; /* Apila elementos en columna */
+  background: #FFF5E1; /* Color de fondo */
+  color: #48312a; /* Color de texto */
 }
 
+/* ===========================
+   ESTILOS PARA TITULOS
+   =========================== */
 h1,h2,h3,h4,h5,h6 {
-    font-family: "Pacifico", cursive;
-    font-weight: 400;
-    font-style: normal;
-    color: #48312a;
+  font-family: "Pacifico", cursive; /* Fuente decorativa */
+  font-weight: 400; /* Peso normal */
+  font-style: normal; /* Sin cursiva */
+  color: #48312a; /* Color marrón oscuro */
 }
 
+/* ===========================
+   ESTILOS DEL BLOG
+   =========================== */
 .titulo-blog {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 10px;
+  font-size: 2.5rem; /* Tamaño grande para título */
+  text-align: center; /* Centrado */
+  margin-bottom: 10px; /* Espacio inferior */
 }
 
 .subtitulo-blog {
-    font-size: 1.2rem;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #48312a;
+  font-size: 1.2rem; /* Tamaño subtítulo */
+  text-align: center; /* Centrado */
+  margin-bottom: 20px; /* Espacio inferior */
+  color: #48312a; /* Color cafe */
 }
 
 .articulos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  display: flex; /* Layout flexible */
+  flex-direction: column; /* Apila los artículos verticalmente */
+  align-items: center; /* Centrado horizontal */
+  width: 100%; /* Ocupa todo el ancho disponible */
+  max-width: 1200px; /* Máximo ancho para desktop */
+  margin: 0 auto; /* Centrado horizontal */
+  padding: 20px; /* Espacio interno */
 }
 
+/*ESTILO DE CADA ARTICULO*/
 .articulo {
-    display: flex;
-    border: solid thin #48312a;
-    border-radius: 10px;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    background: #48312a;
-    padding: 40px 30px;
-    margin: 30px;
-    border-style: rounded;
+  display: flex; /* Layout flexible para imagen y texto */
+  border: solid thin #48312a; /* Borde delgado */
+  border-radius: 10px; /* Bordes redondeados */
+  justify-content: space-between; /* Espacio entre elementos */
+  align-items: center; /* Centrado vertical */
+  gap: 20px; /* Separación entre elementos internos */
+  background: #48312a; /* Fondo marrón oscuro */
+  padding: 40px 30px; /* Espaciado interno */
+  margin: 30px; /* Separación externa */
 }
 
 .titulo-articulo {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-    color: #FFC0CB;
+  font-size: 1.8rem; /* Tamaño del titulo */
+  margin-bottom: 10px; /* Espacio inferior */
+  color: #FFC0CB; /* Color rosa */
 }
 
 .descripcion-articulo {
-    font-family: 'Lato', sans-serif;
-    font-size: 20px;
-    margin: 15px 0;
-    color: #FFC0CB;
-    max-width: 50%;
+  font-family: 'Lato', sans-serif; /* Fuente para la descripcion */
+  font-size: 20px; /* Tamaño del texto */
+  margin: 15px 0; /* Margen arriba y abajo */
+  color: #FFC0CB; /* Color rosado */
+  max-width: 50%; /* Ancho máximo de la descripción */
 }
 
-.imagen-articulo img{
-    height: 200px;
-    border-radius: 20px;
+.imagen-articulo img {
+  height: 200px; /* Altura para imagen */
+  border-radius: 20px; /* Bordes redondeados */
 }
 
+/*BOTONES*/
 .btn-articulo {
-    font-family: 'Lato', sans-serif;
-    padding: 10px 20px;
-    background: #FFC0CB;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 10px;
+  font-family: 'Lato', sans-serif; /* Fuente del boton */
+  padding: 10px 20px; /* Espaciado interno */
+  background: #FFC0CB; /* Color de fondo rosado */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor en forma de mano */
+  margin: 10px; /* Margen externo */
 }
 
 .formato-texto {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex; /* Layout flexible */
+  flex-direction: column; /* Apila en columna */
+  justify-content: center; /* Centrado vertical */
 }
-  
+
+/*FOOTER*/
 footer {
-  text-align: center;
-  background: #8B4513;
-  color: white;
-  padding: 20px;
-  margin-top: 40px;
+  text-align: center; /* Centrado del texto */
+  background: #8B4513; /* Fondo cafe */
+  color: white; /* Color de texto */
+  padding: 20px; /* Espaciado interno */
+  margin-top: 40px; /* Separación superior */
 }
 
 
