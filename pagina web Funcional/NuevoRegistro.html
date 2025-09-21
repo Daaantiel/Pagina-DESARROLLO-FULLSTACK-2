@@ -5,126 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registro - Pasteleria Mil Sabores</title>
   <link href="https://fonts.googleapis.com/css2?family=Lato&family=Pacifico&display=swap" rel="stylesheet">
-<style>
-body {
-  font-family: 'Lato', sans-serif;
-  background-color: #FFF5E1;
-  color: #5D4037;
-  margin: 0;
-  padding: 0;
-  
-}
-
-header {
-  background: linear-gradient( #8B4513, #5D4037);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-  color: white;
-  padding: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-.logo img {
-  width: 50px;
-  margin-right: 10px;
-  border-radius: 50%;
-}
-
-.nombre-empresa {
-  font-family: 'Pacifico', cursive;
-  font-size: 1.5em;
-}
-
-nav {
-  display: flex;
-  gap: 15px;
-  align-items: center;
-}
-
-nav a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-.numerito {
-  background: #FFC0CB;
-  color: #5D4037;
-  border-radius: 50%;
-  padding: 2px 6px;
-  font-size: 0.9em;
-  margin-left: 3px;
-}
-
-
-.registro-container {
-  max-width: 400px;
-  margin: 60px auto;
-  padding: 20px;
-  background: #fff3f3;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-.registro-container h2 {
-  text-align: center;
-  color: #5a2d0c;
-  margin-bottom: 20px;
-}
-
-.form-registro {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-registro label {
-  margin: 10px 0 5px;
-  font-weight: bold;
-  color: #5a2d0c;
-}
-
-.form-registro input {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-
-.form-registro button {
-  margin-top: 20px;
-  padding: 12px;
-  background-color: #d2691e;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.form-registro button:hover {
-  background-color: #a0522d;
-}
-
-.errores {
-  color: red;
-  font-size: 14px;
-  margin-top: 10px;
-  text-align: center;
-}
-
-</style>
-
+  <link rel="stylesheet" href="../pagina web/css/RegistroCSS.css">
 </head>
+
 <body>
  <header>
       <div class="logo">
@@ -133,8 +16,8 @@ nav a:hover {
       </div>
       <nav class="nav-main">
           <a href="Index.html">Inicio</a>
-          <a href="catalogo.html">Productos</a>
-          <a href="blog.html">Blog</a>
+          <a href="Catalogo.html">Productos</a>
+          <a href="Blog.html">Blog</a>
           <a href="#contacto">Contáctanos</a>
       </nav>
       <nav class="nav-login">
@@ -145,9 +28,9 @@ nav a:hover {
   </header>
 
   <main class="registro-container">
-    <h2>Crear Cuenta</h2>
+    <h2>Crear una Cuenta</h2>
     <form id="formRegistro" class="form-registro">
-      <label for="nombre">Nombre completo</label>
+      <label for="nombre">Nombre</label>
       <input type="text" id="nombre" name="nombre" required>
 
       <label for="correo">Correo electronico</label>
