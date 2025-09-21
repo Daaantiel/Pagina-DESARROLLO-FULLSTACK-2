@@ -5,15 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inicio - Pastelería Mil Sabores</title>
   <link href="https://fonts.googleapis.com/css2?family=Lato&family=Pacifico&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../pagina web/css/IndexCSS.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/IndexCSS.css">
 
 </head>
 <body>
+
   <header>
     <div class="logo">
-      <img src="../pagina web/IMG/LogoPateleria.jpeg" alt="Logo de Pasteleria Mil Sabores">
+      <img src="IMG/LogoPateleria.jpeg" alt="Logo de Pasteleria Mil Sabores">
       <h2 class="nombre-empresa">Pastelería Mil Sabores</h2>
     </div>
+    
     <nav class="nav-main">
       <a href="Index.html">Inicio</a>
       <a href="Catalogo.html">Productos</a>
@@ -25,17 +28,20 @@
       <a href="NuevoLogin.html">Iniciar Sesión</a>
       <a href="NuevoRegistro.html">Registrarse</a>
     </nav>
-       <script src="../pagina web/js/navUsuario.js"></script>
+
+      <script src="js/navUsuario.js"></script>
   </header>
 
-  <section class="main">
-    <div>
-      <h1 class="titulo-home">🎂 Pasteleria Mil Sabores 🎂</h1>
-      <p class="subtitulo">Somos una pastelería familiar y nos dedicamos a entregar productos de excelente calidad. El trabajo bien hecho, la utilización de los mejores ingredientes y el sabor a cariño en nuestros productos son los sellos que nos hacen únicos e inolvidables.</p>
-      <button class="btn-catalogo" onclick="location.href='../pagina web/Catalogo.html'">Ver productos</button>
-    </div>
-    <div class="imagen-home">
-      <img src="../pagina web/IMG/TortaDecorada.jpg" alt="Torta decorada de la pastelería">
+  <section class="main container my-5">
+    <div class="row align-items-center">
+      <div class="col-md-6 text-center text-md-start">
+        <h1 class="titulo-home"> Pasteleria Mil Sabores </h1>
+        <p class="subtitulo">Somos una pastelería familiar y nos dedicamos a entregar productos de excelente calidad. El trabajo bien hecho, la utilización de los mejores ingredientes y el sabor a cariño en nuestros productos son los sellos que nos hacen únicos e inolvidables.</p>
+        <button class="btn btn-primary" onclick="location.href='Catalogo.html'">Ver productos</button>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="IMG/LogoPateleria.jpeg" class="img-fluid rounded" alt="Torta decorada de la pastelería">
+      </div>
     </div>
   </section>
 
@@ -44,13 +50,15 @@
     <div id="contenedor-pd" class="cont-productos-destacados"></div>
   </section>
 
-  <footer id="contacto">
+  <footer id="contacto" class="text-center p-4">
     <p>📍 Dirección: Concepcion, Chile</p>
     <p>📞 Teléfono: +56 9 7321 4022</p>
     <p>© 2025 Pasteleria Mil Sabores - Todos los derechos reservados al creador de la pagina :D</p>
   </footer>
 
-  <script src="../pagina web/js/productosHome.js" defer></script>
+  <script src="js/productosHome.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
