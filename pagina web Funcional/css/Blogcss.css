@@ -144,4 +144,12 @@ h1,h2,h3,h4,h5,h6 {
     justify-content: center;
 }
   
+footer {
+  text-align: center;
+  background: #8B4513;
+  color: white;
+  padding: 20px;
+  margin-top: 40px;
+}
+
 
