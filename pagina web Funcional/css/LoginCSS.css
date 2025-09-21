@@ -1,114 +1,132 @@
+/* ===========================
+   ESTILOS GENERALES
+   =========================== */
 body {
-  font-family: 'Lato', sans-serif;
-  background-color: #FFF5E1;
-  color: #5D4037;
-  margin: 0;
-  padding: 0;
+  font-family: 'Lato', sans-serif; /* Fuente principal legible */
+  background-color: #FFF5E1; /* Fondo color crema claro */
+  color: #5D4037; /* Color de texto marrón oscuro */
+  margin: 0; /* Sin margen por defecto */
+  padding: 0; /* Sin padding por defecto */
 }
 
+/* ===========================
+   HEADER (ENCABEZADO)
+   =========================== */
 header {
-  background: linear-gradient( #8B4513, #5D4037);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-  color: white;
-  padding: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  background: linear-gradient(#8B4513, #5D4037); /* Degradado marrón */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+  color: white; /* Color de texto */
+  padding: 15px; /* Espaciado interno */
+  display: flex; /* Layout flexible */
+  justify-content: space-between; /* Separación entre elementos */
+  align-items: center; /* Centrado vertical */
+  flex-wrap: wrap; /* Permite que elementos bajen de línea */
 }
 
+/* LOGO */
 .logo {
-  display: flex;
-  align-items: center;
+  display: flex; /* Layout flexible */
+  align-items: center; /* Centrado vertical */
 }
 
 .logo img {
-  width: 50px;
-  margin-right: 10px;
-  border-radius: 50%;
+  width: 50px; /* Tamaño del logo */
+  margin-right: 10px; /* Separación con el texto */
+  border-radius: 50%; /* Bordes redondeados */
 }
 
 .nombre-empresa {
-  font-family: 'Pacifico', cursive;
-  font-size: 1.5em;
+  font-family: 'Pacifico', cursive; /* Fuente decorativa */
+  font-size: 1.5em; /* Tamaño del texto */
 }
 
+/* NAVEGACIÓN */
 nav {
-  display: flex;
-  gap: 15px;
-  align-items: center;
+  display: flex; /* Layout flexible */
+  gap: 15px; /* Separación entre links */
+  align-items: center; /* Centrado vertical */
 }
 
 nav a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
+  text-decoration: none; /* Sin subrayado */
+  color: white; /* Color del link */
+  font-weight: bold; /* Texto en negrita */
 }
 
 nav a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Subrayado al pasar cursor */
 }
 
+/* CARRITO NUMERITO (badge) */
 .numerito {
-  background: #FFC0CB;
-  color: #5D4037;
-  border-radius: 50%;
-  padding: 2px 6px;
-  font-size: 0.9em;
-  margin-left: 3px;
+  background: #FFC0CB; /* Fondo rosa */
+  color: #5D4037; /* Texto marrón */
+  border-radius: 50%; /* Redondeado completo */
+  padding: 2px 6px; /* Espaciado interno */
+  font-size: 0.9em; /* Tamaño del texto */
+  margin-left: 3px; /* Separación lateral */
 }
 
-
+/* ===========================
+   CONTENEDOR LOGIN
+   =========================== */
 .login-container {
-  max-width: 400px;
-  margin: 60px auto;
-  padding: 20px;
-  background: #fff3f3;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  max-width: 400px; /* Ancho máximo del formulario */
+  margin: 60px auto; /* Centrado horizontal con margen superior */
+  padding: 20px; /* Espaciado interno */
+  background: #fff3f3; /* Fondo rosado claro */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Sombra suave */
 }
 
 .login-container h2 {
-  text-align: center;
-  color: #5a2d0c;
-  margin-bottom: 20px;
+  text-align: center; /* Centrado del título */
+  color: #5a2d0c; /* Marrón oscuro */
+  margin-bottom: 20px; /* Separación inferior */
 }
 
+/* ===========================
+   FORMULARIO LOGIN
+   =========================== */
 .form-login {
-  display: flex;
-  flex-direction: column;
+  display: flex; /* Layout flexible */
+  flex-direction: column; /* Campos uno debajo de otro */
 }
 
 .form-login label {
-  margin: 10px 0 5px;
-  font-weight: bold;
-  color: #5a2d0c;
+  margin: 10px 0 5px; /* Separación superior e inferior */
+  font-weight: bold; /* Negrita */
+  color: #5a2d0c; /* Color marrón oscuro */
 }
 
 .form-login input {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  padding: 10px; /* Espaciado interno */
+  border: 1px solid #ccc; /* Borde gris */
+  border-radius: 6px; /* Bordes redondeados */
 }
 
 .form-login button {
-  margin-top: 20px;
-  padding: 12px;
-  background-color: #d2691e;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 16px;
+  margin-top: 20px; /* Separación superior */
+  padding: 12px; /* Espaciado interno */
+  background-color: #d2691e; /* Fondo marrón oscuro */
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 6px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor tipo mano */
+  font-size: 16px; /* Tamaño del texto */
 }
 
 .form-login button:hover {
-  background-color: #a0522d;
+  background-color: #a0522d; /* Fondo más oscuro al pasar cursor */
 }
 
+/* ===========================
+   MENSAJES DE ERROR
+   =========================== */
 .errores {
-  color: red;
-  font-size: 14px;
-  margin-top: 10px;
-  text-align: center;
+  color: red; /* Texto en rojo */
+  font-size: 14px; /* Tamaño más pequeño */
+  margin-top: 10px; /* Separación superior */
+  text-align: center; /* Centrado */
 }
+
