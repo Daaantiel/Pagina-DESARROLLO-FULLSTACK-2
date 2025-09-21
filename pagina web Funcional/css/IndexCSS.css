@@ -1,139 +1,152 @@
-  
-  body {
-  font-family: 'Lato', sans-serif;
-  background-color: #FFF5E1;
-  color: #5D4037;
-  margin: 0;
-  padding: 0;
+/* ===========================
+   ESTILOS GENERALES DEL BODY
+   =========================== */
+body {
+  font-family: 'Lato', sans-serif; /* Fuente principal legible */
+  background-color: #FFF5E1; /* Fondo color crema claro */
+  color: #5D4037; /* Color de texto marrón oscuro */
+  margin: 0; /* Sin margen por defecto */
+  padding: 0; /* Sin padding por defecto */
 }
 
-/* Header */
+/* ===========================
+   HEADER (ENCABEZADO)
+   =========================== */
 header {
-  background: linear-gradient( #8B4513, #5D4037);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-  color: white;
-  padding: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  background: linear-gradient(#8B4513, #5D4037); /* Degradado marrón */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+  color: white; /* Color de texto */
+  padding: 15px; /* Espaciado interno */
+  display: flex; /* Layout flexible */
+  justify-content: space-between; /* Espacio entre elementos */
+  align-items: center; /* Centrado vertical */
+  flex-wrap: wrap; /* Permite que elementos bajen a otra línea si es necesario */
 }
 
+/* LOGO */
 .logo {
-  display: flex;
-  align-items: center;
+  display: flex; /* Layout flexible */
+  align-items: center; /* Centrado vertical */
 }
 
 .logo img {
-  width: 50px;
-  margin-right: 10px;
-  border-radius: 50%;
+  width: 50px; /* Tamaño del logo */
+  margin-right: 10px; /* Separación del texto */
+  border-radius: 50%; /* Logo redondeado */
 }
 
 .nombre-empresa {
-  font-family: 'Pacifico', cursive;
-  font-size: 1.5em;
+  font-family: 'Pacifico', cursive; /* Fuente decorativa */
+  font-size: 1.5em; /* Tamaño del texto */
 }
 
-/* Navegación */
+/* NAVEGACIÓN */
 nav {
-  display: flex;
-  gap: 15px;
-  align-items: center;
+  display: flex; /* Layout flexible */
+  gap: 15px; /* Separación entre links */
+  align-items: center; /* Centrado vertical */
 }
 
 nav a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
+  text-decoration: none; /* Sin subrayado */
+  color: white; /* Color del link */
+  font-weight: bold; /* Negrita */
 }
 
 nav a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Subrayado al pasar cursor */
 }
 
-/* Carrito numerito */
+/* CARRITO NUMERITO (badge) */
 .numerito {
-  background: #FFC0CB;
-  color: #5D4037;
-  border-radius: 50%;
-  padding: 2px 6px;
-  font-size: 0.9em;
-  margin-left: 3px;
+  background: #FFC0CB; /* Fondo rosa */
+  color: #5D4037; /* Texto marrón */
+  border-radius: 50%; /* Redondeado completo */
+  padding: 2px 6px; /* Espaciado interno */
+  font-size: 0.9em; /* Tamaño del texto */
+  margin-left: 3px; /* Separación lateral */
 }
 
-/* Bloque principal */
+/* ===========================
+   BLOQUE PRINCIPAL HOME
+   =========================== */
 .main {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 20px;
-  flex-wrap: wrap;
+  display: flex; /* Layout flexible */
+  justify-content: space-between; /* Espacio entre elementos */
+  align-items: center; /* Centrado vertical */
+  max-width: 1000px; /* Ancho máximo del contenido */
+  margin: 40px auto; /* Centrado horizontal y margen superior */
+  padding: 20px; /* Espaciado interno */
+  flex-wrap: wrap; /* Permite que los elementos bajen a otra línea */
 }
 
+/* TITULOS PRINCIPALES */
 .titulo-home {
-  font-family: 'Pacifico', cursive;
-  color: #5D4037;
-  font-size: 2.5em;
+  font-family: 'Pacifico', cursive; /* Fuente decorativa */
+  color: #5D4037; /* Marrón oscuro */
+  font-size: 2.5em; /* Tamaño grande */
 }
 
 .subtitulo {
-  margin-top: 10px;
-  font-size: 1.2em;
-  font-style: italic;
+  margin-top: 10px; /* Separación superior */
+  font-size: 1.2em; /* Tamaño de subtítulo */
+  font-style: italic; /* Estilo cursiva */
 }
 
+/* IMAGEN HOME */
 .imagen-home img {
-  max-width: 350px;
-  border-radius: 15px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  max-width: 350px; /* Ancho máximo */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2); /* Sombra suave */
 }
 
-/* Botón */
+/* BOTÓN CATALOGO */
 .btn-catalogo {
-  background: #FFC0CB;
-  color: #5D4037;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 15px;
-  cursor: pointer;
-  font-weight: bold;
-  margin-top: 20px;
-  transition: background 0.3s;
+  background: #FFC0CB; /* Fondo rosa */
+  color: #5D4037; /* Texto marrón */
+  padding: 12px 20px; /* Espaciado interno */
+  border: none; /* Sin borde */
+  border-radius: 15px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor tipo mano */
+  font-weight: bold; /* Negrita */
+  margin-top: 20px; /* Separación superior */
+  transition: background 0.3s; /* Animación suave al hover */
 }
 
 .btn-catalogo:hover {
-  background: #ff9bb5;
+  background: #ff9bb5; /* Color rosa más intenso al pasar cursor */
 }
 
-/* Productos destacados */
+/* ===========================
+   PRODUCTOS DESTACADOS
+   =========================== */
 .productos-destacados {
-  max-width: 1000px;
-  margin: 30px auto;
-  text-align: center;
+  max-width: 1000px; /* Ancho máximo */
+  margin: 30px auto; /* Centrado horizontal con margen superior */
+  text-align: center; /* Centrado del contenido */
 }
 
 .titulo-destacados {
-  font-family: 'Pacifico', cursive;
-  color: #8B4513;
-  margin-bottom: 20px;
+  font-family: 'Pacifico', cursive; /* Fuente decorativa */
+  color: #8B4513; /* Marrón oscuro */
+  margin-bottom: 20px; /* Separación inferior */
 }
 
 .cont-productos-destacados {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 20px;
+  display: grid; /* Layout en cuadrícula */
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Columnas responsivas */
+  gap: 20px; /* Separación entre productos */
 }
 
-/* Footer */
+/* ===========================
+   FOOTER
+   =========================== */
 footer {
-  text-align: center;
-  background: #8B4513;
-  color: white;
-  padding: 20px;
-  margin-top: 40px;
+  text-align: center; /* Centrado */
+  background: #8B4513; /* Fondo marrón */
+  color: white; /* Texto blanco */
+  padding: 20px; /* Espaciado interno */
+  margin-top: 40px; /* Separación superior */
 }
 
   
