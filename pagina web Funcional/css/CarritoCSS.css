@@ -1,236 +1,275 @@
+/* ===========================
+   ESTILOS GENERALES DEL BODY
+   =========================== */
 body {
-  font-family: 'Lato', sans-serif;
-  background-color: #FFF5E1;
-  color: #5D4037;
-  margin: 0;
-  padding: 0;
+  font-family: 'Lato', sans-serif; /* Fuente principal del sitio */
+  background-color: #FFF5E1; /* Fondo color crema claro */
+  color: #5D4037; /* Color de texto marrón oscuro */
+  margin: 0; /* Elimina margen por defecto */
+  padding: 0; /* Elimina padding por defecto */
 }
 
+/* ===========================
+   HEADER (ENCABEZADO)
+   =========================== */
 header {
-  background: linear-gradient( #8B4513, #5D4037);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-  color: white;
-  padding: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  background: linear-gradient(#8B4513, #5D4037); /* Degradado marrón */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+  color: white; /* Color del texto */
+  padding: 15px; /* Espaciado interno */
+  display: flex; /* Layout flexible */
+  justify-content: space-between; /* Espacio entre elementos */
+  align-items: center; /* Centrado vertical */
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas */
 }
+
+/* ===========================
+   LOGO DE LA EMPRESA
+   =========================== */
 .logo {
-  display: flex;
-  align-items: center;
+  display: flex; /* Layout flexible */
+  align-items: center; /* Centrado vertical */
 }
 
 .logo img {
-  width: 50px;
-  margin-right: 10px;
-  border-radius: 50%;
+  width: 50px; /* Tamaño del logo */
+  margin-right: 10px; /* Separación del texto */
+  border-radius: 50%; /* Logo redondeado */
 }
 
 .nombre-empresa {
-  font-family: 'Pacifico', cursive;
-  font-size: 1.5em;
+  font-family: 'Pacifico', cursive; /* Fuente decorativa */
+  font-size: 1.5em; /* Tamaño del nombre */
 }
 
+/* ===========================
+   NAVEGACIÓN
+   =========================== */
 nav {
-  display: flex;
-  gap: 15px;
-  align-items: center;
+  display: flex; /* Layout flexible */
+  gap: 15px; /* Espacio entre links */
+  align-items: center; /* Centrado vertical */
 }
 
 nav a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
+  text-decoration: none; /* Sin subrayado */
+  color: white; /* Color del link */
+  font-weight: bold; /* Negrita */
 }
 
 nav a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Subrayado al pasar el cursor */
 }
 
+/* ===========================
+   NUMERITO (badge de carrito)
+   =========================== */
 .numerito {
-  background: #FFC0CB;
-  color: #5D4037;
-  border-radius: 50%;
-  padding: 2px 6px;
-  font-size: 0.9em;
-  margin-left: 3px;
+  background: #FFC0CB; /* Fondo rosa */
+  color: #5D4037; /* Texto marrón */
+  border-radius: 50%; /* Redondeado completo */
+  padding: 2px 6px; /* Espaciado interno */
+  font-size: 0.9em; /* Tamaño pequeño */
+  margin-left: 3px; /* Separación lateral */
 }
 
+/* ===========================
+   SECCIÓN CARRITO
+   =========================== */
 .carrito {
-  max-width: 1000px;
-  margin: 30px auto;
-  padding: 20px;
+  max-width: 1000px; /* Ancho máximo */
+  margin: 30px auto; /* Centrado horizontal */
+  padding: 20px; /* Espaciado interno */
 }
 
 .mensaje {
-  text-align: center;
-  background: white;
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  text-align: center; /* Centrado del texto */
+  background: white; /* Fondo blanco */
+  padding: 40px; /* Espaciado interno */
+  border-radius: 20px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2); /* Sombra suave */
 }
 
+/* ===========================
+   PRODUCTOS EN EL CARRITO
+   =========================== */
 #carro-productos {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  display: flex; /* Layout flexible */
+  flex-direction: column; /* Apila los productos */
+  gap: 20px; /* Separación entre productos */
 }
 
 .carrito-producto {
-  display: grid;
-  grid-template-columns: 80px 1fr 100px 100px 120px 50px;
-  align-items: center;
-  gap: 15px;
-  background: white;
-  padding: 15px;
-  border-radius: 15px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  display: grid; /* Layout en cuadrícula */
+  grid-template-columns: 80px 1fr 100px 100px 120px 50px; /* Columnas del grid */
+  align-items: center; /* Centrado vertical */
+  gap: 15px; /* Separación interna */
+  background: white; /* Fondo blanco */
+  padding: 15px; /* Espaciado interno */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2); /* Sombra suave */
 }
 
 .carro-img {
-  width: 80px;
-  height: 80px;
-  border-radius: 10px;
-  object-fit: cover;
+  width: 80px; /* Ancho de la imagen */
+  height: 80px; /* Alto de la imagen */
+  border-radius: 10px; /* Bordes redondeados */
+  object-fit: cover; /* Ajusta la imagen sin deformar */
 }
 
 .carro-producto-titulo h3 {
-  font-family: 'Pacifico', cursive;
-  margin: 0;
+  font-family: 'Pacifico', cursive; /* Fuente decorativa */
+  margin: 0; /* Sin margen */
 }
 
 .carro-producto-cantidad,
 .carro-producto-precio,
 .carro-producto-subtotal {
-  text-align: center;
+  text-align: center; /* Centrado */
 }
 
 .carro-producto-eliminar {
-  background: transparent;
-  border: none;
-  color: #8B0000;
-  font-size: 1.5em;
-  cursor: pointer;
+  background: transparent; /* Sin fondo */
+  border: none; /* Sin borde */
+  color: #8B0000; /* Color rojo oscuro */
+  font-size: 1.5em; /* Tamaño grande */
+  cursor: pointer; /* Cursor tipo mano */
 }
 
+/* ===========================
+   ACCIONES DEL CARRITO
+   =========================== */
 .carro-acciones {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: white;
-  padding: 15px 20px;
-  margin-top: 20px;
-  border-radius: 15px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  display: flex; /* Layout flexible */
+  justify-content: space-between; /* Espacio entre botones y total */
+  align-items: center; /* Centrado vertical */
+  background: white; /* Fondo blanco */
+  padding: 15px 20px; /* Espaciado interno */
+  margin-top: 20px; /* Separación superior */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2); /* Sombra suave */
 }
 
 .carro-acciones-v,
 .carro-acciones-comprar {
-  background: #FFC0CB;
-  color: #5D4037;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 12px;
-  cursor: pointer;
-  font-weight: bold;
+  background: #FFC0CB; /* Fondo rosa */
+  color: #5D4037; /* Texto marrón */
+  border: none; /* Sin borde */
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 12px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor tipo mano */
+  font-weight: bold; /* Texto en negrita */
 }
 
 .carro-acciones-v:hover,
 .carro-acciones-comprar:hover {
-  background: #ff9bb5;
+  background: #ff9bb5; /* Cambio de color al pasar cursor */
 }
 
 .carro-acciones-total {
-  font-weight: bold;
-  font-size: 1.2em;
+  font-weight: bold; /* Negrita */
+  font-size: 1.2em; /* Tamaño del texto */
 }
 
+/* ===========================
+   FOOTER
+   =========================== */
 footer {
-  text-align: center;
-  background: #8B4513;
-  color: white;
-  padding: 20px;
-  margin-top: 40px;
+  text-align: center; /* Centrado */
+  background: #8B4513; /* Fondo marrón */
+  color: white; /* Texto blanco */
+  padding: 20px; /* Espaciado interno */
+  margin-top: 40px; /* Separación superior */
 }
 
+/* ===========================
+   CLASES ADICIONALES
+   =========================== */
 .disabled {
-  display: none !important;
+  display: none !important; /* Oculta elementos */
 }
 
 .btn-volver {
-  background: #FFC0CB;
-  color: #5D4037;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 12px;
-  cursor: pointer;
-  font-weight: bold;
-  margin-top: 15px;
+  background: #FFC0CB; /* Fondo rosa */
+  color: #5D4037; /* Texto marrón */
+  border: none; /* Sin borde */
+  padding: 10px 20px; /* Espaciado */
+  border-radius: 12px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor tipo mano */
+  font-weight: bold; /* Negrita */
+  margin-top: 15px; /* Separación superior */
 }
 
 .btn-volver:hover {
-  background: #ff9bb5;
+  background: #ff9bb5; /* Color al pasar cursor */
 }
+
+/* ===========================
+   MAIN Y CONTENEDORES
+   =========================== */
 main {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 20px;
-  flex-wrap: wrap;
+  display: flex; /* Layout flexible */
+  justify-content: space-between; /* Espacio entre elementos */
+  align-items: center; /* Centrado vertical */
+  max-width: 1000px; /* Ancho máximo */
+  margin: 40px auto; /* Centrado horizontal y margen superior */
+  padding: 20px; /* Espaciado interno */
+  flex-wrap: wrap; /* Permite que los elementos bajen a otra fila */
 }
 
 h2 {
-  font-family: 'Pacifico', cursive;
-  color: #ffffff;
-  text-align: center;
-  margin-bottom: 20px;
+  font-family: 'Pacifico', cursive; /* Fuente decorativa */
+  color: #ffffff; /* Texto blanco */
+  text-align: center; /* Centrado */
+  margin-bottom: 20px; /* Separación inferior */
 }
 
-
+/* ===========================
+   TABLAS
+   =========================== */
 table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
+  width: 100%; /* Ocupa todo el ancho */
+  border-collapse: collapse; /* Quita espacios entre celdas */
+  margin-bottom: 20px; /* Separación inferior */
 }
 
 th, td {
-  border-bottom: 1px solid #ddd;
-  padding: 12px;
-  text-align: center;
+  border-bottom: 1px solid #ddd; /* Línea inferior */
+  padding: 12px; /* Espaciado interno */
+  text-align: center; /* Centrado de texto */
 }
 
 th {
-  background: #FFC0CB;
-  color: #5D4037;
+  background: #FFC0CB; /* Fondo rosa */
+  color: #5D4037; /* Texto marrón */
 }
 
-
+/* ===========================
+   TOTAL Y ACCIONES
+   =========================== */
 .total {
-  text-align: right;
-  font-size: 1.2em;
-  font-weight: bold;
+  text-align: right; /* Alinea a la derecha */
+  font-size: 1.2em; /* Tamaño del texto */
+  font-weight: bold; /* Negrita */
 }
-
 
 .acciones {
-  text-align: right;
-  margin-top: 20px;
+  text-align: right; /* Alinea a la derecha */
+  margin-top: 20px; /* Separación superior */
 }
 
 button {
-  background: #FFC0CB;
-  color: #5D4037;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  font-weight: bold;
-  margin-left: 10px;
+  background: #FFC0CB; /* Fondo rosa */
+  color: #5D4037; /* Texto marrón */
+  padding: 10px 15px; /* Espaciado interno */
+  border: none; /* Sin borde */
+  border-radius: 12px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor tipo mano */
+  font-weight: bold; /* Negrita */
+  margin-left: 10px; /* Separación lateral */
 }
 
 button:hover {
-  background: #ff9bb5;
+  background: #ff9bb5; /* Cambio de color al pasar cursor */
 }
+
