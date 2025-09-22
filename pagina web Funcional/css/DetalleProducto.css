@@ -4,7 +4,7 @@
 body {
   font-family: 'Lato', sans-serif; /* Fuente principal legible */
   background-color: #FFF5E1; /* Fondo color crema claro */
-  color: #5D4037; /* Color de texto marrón oscuro */
+  color: #5D4037; /* Color de texto cafe oscuro */
   margin: 0; /* Sin margen por defecto */
   padding: 0; /* Sin padding por defecto */
 }
@@ -22,7 +22,7 @@ h1,h2,h3,h4,h5,h6 {
    HEADER (ENCABEZADO)
    =========================== */
 header {
-  background: linear-gradient(#8B4513, #5D4037); /* Degradado marrón */
+  background: linear-gradient(#8B4513, #5D4037); /* Degradado cafe */
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
   color: white; /* Color de texto */
   padding: 15px; /* Espaciado interno */
@@ -90,12 +90,5 @@ main img {
   padding-left: 0.5em; /* Separación izquierda */
   width: 400px; /* Ancho de la imagen */
   border-radius: 1rem; /* Bordes redondeados */
-  /* Nota: 'position: left' no existe, se recomienda usar float o flex/grid */
 }
 
-/* ===========================
-   CONTENEDOR DETALLE PRODUCTO
-   =========================== */
-#contenedor-detalle-p {
-  /* Nota: 'position: right' no existe, usar flexbox, grid o float */
-}
