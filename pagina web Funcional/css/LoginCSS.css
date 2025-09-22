@@ -2,9 +2,9 @@
    ESTILOS GENERALES
    =========================== */
 body {
-  font-family: 'Lato', sans-serif; /* Fuente principal legible */
+  font-family: 'Lato', sans-serif; /* Fuente principal del sitio */
   background-color: #FFF5E1; /* Fondo color crema claro */
-  color: #5D4037; /* Color de texto marrón oscuro */
+  color: #5D4037; /* Color de texto cafe oscuro */
   margin: 0; /* Sin margen por defecto */
   padding: 0; /* Sin padding por defecto */
 }
@@ -13,7 +13,7 @@ body {
    HEADER (ENCABEZADO)
    =========================== */
 header {
-  background: linear-gradient(#8B4513, #5D4037); /* Degradado marrón */
+  background: linear-gradient(#8B4513, #5D4037); /* Degradado cafe */
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
   color: white; /* Color de texto */
   padding: 15px; /* Espaciado interno */
@@ -60,7 +60,7 @@ nav a:hover {
 /* CARRITO NUMERITO (badge) */
 .numerito {
   background: #FFC0CB; /* Fondo rosa */
-  color: #5D4037; /* Texto marrón */
+  color: #5D4037; /* Texto cafe */
   border-radius: 50%; /* Redondeado completo */
   padding: 2px 6px; /* Espaciado interno */
   font-size: 0.9em; /* Tamaño del texto */
@@ -81,7 +81,7 @@ nav a:hover {
 
 .login-container h2 {
   text-align: center; /* Centrado del título */
-  color: #5a2d0c; /* Marrón oscuro */
+  color: #5a2d0c; /* Cafe oscuro */
   margin-bottom: 20px; /* Separación inferior */
 }
 
@@ -96,7 +96,7 @@ nav a:hover {
 .form-login label {
   margin: 10px 0 5px; /* Separación superior e inferior */
   font-weight: bold; /* Negrita */
-  color: #5a2d0c; /* Color marrón oscuro */
+  color: #5a2d0c; /* Color cafe oscuro */
 }
 
 .form-login input {
@@ -108,7 +108,7 @@ nav a:hover {
 .form-login button {
   margin-top: 20px; /* Separación superior */
   padding: 12px; /* Espaciado interno */
-  background-color: #d2691e; /* Fondo marrón oscuro */
+  background-color: #d2691e; /* Fondo cafe oscuro */
   color: white; /* Texto blanco */
   border: none; /* Sin borde */
   border-radius: 6px; /* Bordes redondeados */
@@ -129,4 +129,5 @@ nav a:hover {
   margin-top: 10px; /* Separación superior */
   text-align: center; /* Centrado */
 }
+
 
