@@ -6,10 +6,10 @@
   <title>Catalogo - Pastelería Mil Sabores</title>
   <link href="https://fonts.googleapis.com/css2?family=Lato&family=Pacifico&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../pagina web/css/CatalogoCSS.css">
-
 </head>
 <body>
 
+  <!-- Header con logo, navegación principal y login/carrito -->
   <header>
     <div class="logo">
       <img src="../pagina web/IMG/LogoPateleria.jpeg" alt="Logo de Pastelería Mil Sabores">
@@ -29,11 +29,12 @@
       <a href="NuevoRegistro.html">Registrarse</a>
     </nav>
     
-     <script src="../pagina web/js/navUsuario.js"></script>
+    <script src="../pagina web/js/navUsuario.js"></script>
   </header>
 
-
+  <!-- Contenedor principal con filtros y productos -->
   <div class="container">
+    <!-- Barra lateral de filtros -->
     <aside class="filtros">
       <h3>Filtrar por tamaño</h3>
       <label>
@@ -60,35 +61,39 @@
       <button id="btn-limpiar">Quitar filtros</button>
     </aside>
 
+    <!-- Sección principal de productos -->
     <main>
       <h2 class="titulo-catalogo">Catalogo de Productos</h2>
       <div id="contenedor-p" class="contenedor-productos">
+        <!-- Los productos se cargan dinámicamente desde Catalogojs.js -->
       </div>
     </main>
   </div>
   
-    <div class="producto">
+  <!-- Ejemplo de producto relacionado -->
+  <div class="producto">
     <h3>Productos Relacionados</h3>  
     <a href="DetalleProducto.html?id=1">
-    <img class="producto-imagen" src="../pagina web/IMG/TortaCircular1.jpg" alt="Torta 1">
+      <img class="producto-imagen" src="../pagina web/IMG/TortaCircular1.jpg" alt="Torta 1">
     </a>
-   <div class="producto-informacion">
-    <h3 class="producto-titulo">Torta 1</h3>
-    <p class="producto-precio">$18200 c/u</p>
-    <button class="producto-agregar" id="1">Agregar</button>
+    <div class="producto-informacion">
+      <h3 class="producto-titulo">Torta 1</h3>
+      <p class="producto-precio">$18200 c/u</p>
+      <button class="producto-agregar" id="1">Agregar</button>
+    </div>
   </div>
-</div>
   
+  <!-- Footer con información de contacto -->
   <footer id="contacto">
     <p>📍 Dirección: Concepcion, Chile</p>
     <p>📞 Teléfono: +56 9 7321 4022</p>
     <p>© 2025 Pasteleria Mil Sabores - Todos los derechos reservados al creador de la pagina :D</p>
   </footer>
 
+  <!-- Script de funcionalidad del catálogo -->
   <script src="../pagina web/js/Catalogojs.js" defer></script>
 
 </body>
-
 </html>
 
 
