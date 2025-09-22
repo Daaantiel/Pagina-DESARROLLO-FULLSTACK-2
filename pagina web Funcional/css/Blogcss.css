@@ -13,32 +13,32 @@ body {
    HEADER (ENCABEZADO)
    =========================== */
 header {
-  background: linear-gradient(#8B4513, #5D4037); /* Degradado de marrón */
+  background: linear-gradient(#8B4513, #5D4037); /* Degradado de cafe */
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
   color: white; /* Color de texto */
   padding: 15px; /* Espacio interno */
   display: flex; /* Layout flexible */
   justify-content: space-between; /* Espacio entre elementos */
   align-items: center; /* Centrar verticalmente */
-  flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas si es necesario */
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en varias lineas*/
 }
 
 /* ===========================
-   LOGO DE LA EMPRESA
+   LOGO DE MIL SABORES
    =========================== */
 .logo {
-  display: flex; /* Layout flexible para alinear logo e texto */
+  display: flex; /* Layout flexible para alinear logo Y texto */
   align-items: center; /* Centrado vertical */
 }
 
 .logo img {
   width: 50px; /* Tamaño del logo */
-  margin-right: 10px; /* Espacio entre logo y nombre */
+  margin-right: 10px; /* Espacio entre el logo y el nombre */
   border-radius: 50%; /* Logo redondeado */
 }
 
 .nombre-empresa {
-  font-family: 'Pacifico', cursive; /* Fuente decorativa para el nombre */
+  font-family: 'Pacifico', cursive; /* Fuente para el nombre */
   font-size: 1.5em; /* Tamaño del texto */
 }
 
@@ -86,20 +86,20 @@ h1,h2,h3,h4,h5,h6 {
   font-family: "Pacifico", cursive; /* Fuente decorativa */
   font-weight: 400; /* Peso normal */
   font-style: normal; /* Sin cursiva */
-  color: #48312a; /* Color marrón oscuro */
+  color: #48312a; /* Color cafe oscuro */
 }
 
 /* ===========================
    ESTILOS DEL BLOG
    =========================== */
 .titulo-blog {
-  font-size: 2.5rem; /* Tamaño grande para título */
+  font-size: 2.5rem; /* Tamaño grande para el título */
   text-align: center; /* Centrado */
   margin-bottom: 10px; /* Espacio inferior */
 }
 
 .subtitulo-blog {
-  font-size: 1.2rem; /* Tamaño subtítulo */
+  font-size: 1.2rem; /* Tamaño del subtítulo */
   text-align: center; /* Centrado */
   margin-bottom: 20px; /* Espacio inferior */
   color: #48312a; /* Color cafe */
@@ -117,13 +117,13 @@ h1,h2,h3,h4,h5,h6 {
 
 /*ESTILO DE CADA ARTICULO*/
 .articulo {
-  display: flex; /* Layout flexible para imagen y texto */
+  display: flex; /* Layout flexible para la imagen y el texto */
   border: solid thin #48312a; /* Borde delgado */
   border-radius: 10px; /* Bordes redondeados */
   justify-content: space-between; /* Espacio entre elementos */
   align-items: center; /* Centrado vertical */
   gap: 20px; /* Separación entre elementos internos */
-  background: #48312a; /* Fondo marrón oscuro */
+  background: #48312a; /* Fondo cafe oscuro */
   padding: 40px 30px; /* Espaciado interno */
   margin: 30px; /* Separación externa */
 }
@@ -151,7 +151,7 @@ h1,h2,h3,h4,h5,h6 {
 .btn-articulo {
   font-family: 'Lato', sans-serif; /* Fuente del boton */
   padding: 10px 20px; /* Espaciado interno */
-  background: #FFC0CB; /* Color de fondo rosado */
+  background: #FFC0CB; /* Color de fondo rosa */
   border: none; /* Sin borde */
   border-radius: 5px; /* Bordes redondeados */
   cursor: pointer; /* Cursor en forma de mano */
@@ -172,5 +172,6 @@ footer {
   padding: 20px; /* Espaciado interno */
   margin-top: 40px; /* Separación superior */
 }
+
 
 
