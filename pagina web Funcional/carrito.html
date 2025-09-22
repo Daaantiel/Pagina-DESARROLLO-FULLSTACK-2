@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<head lang="es">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Carrito-Pastabase mil sabores</title>
+  <title>Carrito - Pastelería Mil Sabores</title>
   <link href="https://fonts.googleapis.com/css2?family=Lato&family=Pacifico&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../pagina web/css/CarritoCSS.css">
 </head>
 
 <body>
 
-    <header>
+  <!-- Header con logo y navegación -->
+  <header>
     <div class="logo">
       <img src="../pagina web/IMG/LogoPateleria.jpeg" alt="Logo de Pastelería Mil Sabores">
       <h2 class="nombre-empresa">Pasteleria Mil Sabores</h2>
@@ -28,21 +29,24 @@
       <a href="NuevoRegistro.html">Registrarse</a>
     </nav>
 
-     <script src="../pagina web/js/navUsuario.js"></script>
+    <!-- Script para manejo de usuario en la barra de navegación -->
+    <script src="../pagina web/js/navUsuario.js"></script>
   </header>
 
+  <!-- Sección principal del carrito -->
   <main class="carrito">
-    <!--Carrito vacío-->
+    
+    <!-- Carrito vacío -->
     <section id="carro-vacio" class="mensaje">
       <h2>El carrito está vacio</h2>
       <p>Agregar productos desde el catalogo para comenzar.</p>
     </section>
 
-    <!-- Carrito con productos -->
+    <!-- Carrito con productos (se llena dinámicamente con JS) -->
     <section id="carro-productos" class="disabled">
     </section>
 
-    <!-- Acciones del carrito -->
+    <!-- Acciones del carrito: vaciar, total y finalizar compra -->
     <section id="carro-opciones" class="carro-acciones disabled">
       <button class="carro-acciones-v">Vaciar carrito</button>
       <div class="carro-acciones-total">
@@ -52,21 +56,23 @@
       <button class="carro-acciones-comprar">Finalizar compra</button>
     </section>
 
-    <!-- Mensaje de compra -->
+    <!-- Mensaje de compra realizada -->
     <section id="carro-comprado" class="mensaje disabled">
       <h2>¡Gracias por tu compra!</h2>
       <p>Tu pedido esta siendo preparado.</p>
     </section>
   </main>
 
+  <!-- Footer con datos de contacto -->
   <footer id="contacto">
     <p>📍 Dirección: Concepcion, Chile</p>
     <p>📞 Teléfono: +56 9 7321 4022</p>
     <p>© 2025 Pasteleria Mil Sabores - Todos los derechos reservados al creador de la pagina :D</p>
   </footer>
 
+  <!-- Script para funcionalidad del carrito -->
   <script src="../pagina web/js/CarritoJS.js" defer></script>
 
 </body>
-
 </html>
+
