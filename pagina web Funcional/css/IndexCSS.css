@@ -4,7 +4,7 @@
 body {
   font-family: 'Lato', sans-serif; /* Fuente principal legible */
   background-color: #FFF5E1; /* Fondo color crema claro */
-  color: #5D4037; /* Color de texto marrón oscuro */
+  color: #5D4037; /* Color de texto cafe oscuro */
   margin: 0; /* Sin margen por defecto */
   padding: 0; /* Sin padding por defecto */
 }
@@ -13,14 +13,14 @@ body {
    HEADER (ENCABEZADO)
    =========================== */
 header {
-  background: linear-gradient(#8B4513, #5D4037); /* Degradado marrón */
+  background: linear-gradient(#8B4513, #5D4037); /* Degradado cafe */
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
   color: white; /* Color de texto */
   padding: 15px; /* Espaciado interno */
   display: flex; /* Layout flexible */
   justify-content: space-between; /* Espacio entre elementos */
   align-items: center; /* Centrado vertical */
-  flex-wrap: wrap; /* Permite que elementos bajen a otra línea si es necesario */
+  flex-wrap: wrap; /* Permite que elementos bajen a otra línea*/
 }
 
 /* LOGO */
@@ -60,7 +60,7 @@ nav a:hover {
 /* CARRITO NUMERITO (badge) */
 .numerito {
   background: #FFC0CB; /* Fondo rosa */
-  color: #5D4037; /* Texto marrón */
+  color: #5D4037; /* Texto cafe */
   border-radius: 50%; /* Redondeado completo */
   padding: 2px 6px; /* Espaciado interno */
   font-size: 0.9em; /* Tamaño del texto */
@@ -83,7 +83,7 @@ nav a:hover {
 /* TITULOS PRINCIPALES */
 .titulo-home {
   font-family: 'Pacifico', cursive; /* Fuente decorativa */
-  color: #5D4037; /* Marrón oscuro */
+  color: #5D4037; /* Cafe oscuro */
   font-size: 2.5em; /* Tamaño grande */
 }
 
@@ -103,7 +103,7 @@ nav a:hover {
 /* BOTÓN CATALOGO */
 .btn-catalogo {
   background: #FFC0CB; /* Fondo rosa */
-  color: #5D4037; /* Texto marrón */
+  color: #5D4037; /* Texto cafe */
   padding: 12px 20px; /* Espaciado interno */
   border: none; /* Sin borde */
   border-radius: 15px; /* Bordes redondeados */
@@ -128,7 +128,7 @@ nav a:hover {
 
 .titulo-destacados {
   font-family: 'Pacifico', cursive; /* Fuente decorativa */
-  color: #8B4513; /* Marrón oscuro */
+  color: #8B4513; /* Cafe oscuro */
   margin-bottom: 20px; /* Separación inferior */
 }
 
@@ -143,10 +143,11 @@ nav a:hover {
    =========================== */
 footer {
   text-align: center; /* Centrado */
-  background: #8B4513; /* Fondo marrón */
+  background: #8B4513; /* Fondo cafe */
   color: white; /* Texto blanco */
   padding: 20px; /* Espaciado interno */
   margin-top: 40px; /* Separación superior */
 }
 
   
+
