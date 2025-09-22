@@ -13,8 +13,8 @@ body {
    HEADER (ENCABEZADO)
    =========================== */
 header {
-  background: linear-gradient(#8B4513, #5D4037); /* Degradado marrón */
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+  background: linear-gradient(#8B4513, #5D4037); /* Degradado cafe */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Sombreado */
   color: white; /* Color del texto */
   padding: 15px; /* Espaciado interno */
   display: flex; /* Layout flexible */
@@ -272,4 +272,5 @@ button {
 button:hover {
   background: #ff9bb5; /* Cambio de color al pasar cursor */
 }
+
 
