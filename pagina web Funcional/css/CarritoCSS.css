@@ -66,7 +66,7 @@ nav a:hover {
    =========================== */
 .numerito {
   background: #FFC0CB; /* Fondo rosa */
-  color: #5D4037; /* Texto marrón */
+  color: #5D4037; /* Texto cafe */
   border-radius: 50%; /* Redondeado completo */
   padding: 2px 6px; /* Espaciado interno */
   font-size: 0.9em; /* Tamaño pequeño */
@@ -153,7 +153,7 @@ nav a:hover {
 .carro-acciones-v,
 .carro-acciones-comprar {
   background: #FFC0CB; /* Fondo rosa */
-  color: #5D4037; /* Texto marrón */
+  color: #5D4037; /* Texto cafe */
   border: none; /* Sin borde */
   padding: 10px 20px; /* Espaciado interno */
   border-radius: 12px; /* Bordes redondeados */
@@ -176,7 +176,7 @@ nav a:hover {
    =========================== */
 footer {
   text-align: center; /* Centrado */
-  background: #8B4513; /* Fondo marrón */
+  background: #8B4513; /* Fondo cafe */
   color: white; /* Texto blanco */
   padding: 20px; /* Espaciado interno */
   margin-top: 40px; /* Separación superior */
@@ -272,5 +272,6 @@ button {
 button:hover {
   background: #ff9bb5; /* Cambio de color al pasar cursor */
 }
+
 
 
