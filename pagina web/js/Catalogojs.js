@@ -1,7 +1,7 @@
 const productos = [
     {
         id: 1,
-        titulo: "Torta1",
+        titulo: "Torta Circular De Chocolate Grande",
         imagen: "../pagina web/IMG/TortaCircular1.jpg",
         forma: "Circular",
         tamanio: "Grande",
@@ -9,7 +9,7 @@ const productos = [
     },
     {
         id: 2,
-        titulo: "Torta2",
+        titulo: "Torta Circular De vainilla Grande",
         imagen: "../pagina web/IMG/TortaCircular2.jpg",
         forma: "Circular",
         tamanio: "Grande",
@@ -25,7 +25,7 @@ const productos = [
     },
     {
         id: 4,
-        titulo: "Torta4",
+        titulo: "Torta Circular De berries Grande",
         imagen: "../pagina web/IMG/TortaCircular4.jpg",
         forma: "Circular",
         tamanio: "Grande",
@@ -33,7 +33,7 @@ const productos = [
     },
     {
         id: 5,
-        titulo: "Torta5",
+        titulo: "Torta Circular De pistacho Grande",
         imagen: "../pagina web/IMG/TortaCircular5.jpg",
         forma: "Circular",
         tamanio: "Grande",
@@ -41,7 +41,7 @@ const productos = [
     },
     {
         id: 6,
-        titulo: "Torta6",
+        titulo: "Torta Circular De Chocolate Pequeña",
         imagen: "../pagina web/IMG/TortaPequeña1.jpg",
         forma: "Circular",
         tamanio: "Pequeña",
@@ -49,7 +49,7 @@ const productos = [
     },
     {
         id: 7,
-        titulo: "Torta7",
+        titulo: "Torta Circular De vainilla pequeña",
         imagen: "../pagina web/IMG/TortaPequeña2.jpg",
         forma: "Circular",
         tamanio: "Pequeña",
@@ -57,7 +57,7 @@ const productos = [
     },
     {
         id: 8,
-        titulo: "Torta8",
+        titulo: "Torta Circular De fresas Pequeña",
         imagen: "../pagina web/IMG/TortaPequeña3.jpg",
         forma: "Circular",
         tamanio: "Pequeña",
@@ -65,7 +65,7 @@ const productos = [
     },
     {
         id: 9,
-        titulo: "Torta9",
+        titulo: "Torta Cuadrada De Chocolate Grande",
         imagen: "../pagina web/IMG/TortaCuadrada1.jpg",
         forma: "Cuadrada",
         tamanio: "Grande",
@@ -81,7 +81,7 @@ const productos = [
     },
     {
         id: 11,
-        titulo: "Torta11",
+        titulo: "Torta Circular De vainilla Grande",
         imagen: "../pagina web/IMG/TortaCuadrada3.webp",
         forma: "Cuadrada",
         tamanio: "Grande",
@@ -89,7 +89,7 @@ const productos = [
     },
     {
         id: 12,
-        titulo: "Torta12",
+        titulo: "Torta Circular De frutilla Grande",
         imagen: "../pagina web/IMG/TortaCuadrada4.png",
         forma: "Cuadrada",
         tamanio: "Grande",
@@ -97,7 +97,7 @@ const productos = [
     },
     {
         id: 13,
-        titulo: "Torta13",
+        titulo: "Torta cuadrada De Chocolate pequeña",
         imagen: "../pagina web/IMG/TortaCuadradaPequeña1.jpg",
         forma: "Cuadrada",
         tamanio: "Pequeña",
@@ -105,7 +105,7 @@ const productos = [
     },
     {
         id: 14,
-        titulo: "Torta14",
+        titulo: "Torta cuadrada De vainilla pequeña",
         imagen: "../pagina web/IMG/TortaCuadradaPequeña2.jpg",
         forma: "Cuadrada",
         tamanio: "Pequeña",
@@ -113,7 +113,7 @@ const productos = [
     },
     {
         id: 15,
-        titulo: "Torta15",
+        titulo: "Torta cuadrada De frambuesa pequeña",
         imagen: "../pagina web/IMG/TortaCuadradaPequeña3.webp",
         forma: "Cuadrada",
         tamanio: "Pequeña",
@@ -121,7 +121,7 @@ const productos = [
     },
     {
         id: 16,
-        titulo: "Torta16",
+        titulo: "Torta cuadrada De Pistacho pequeña",
         imagen: "../pagina web/IMG/TortaCuadradaPequeña4.webp",
         forma: "Cuadrada",
         tamanio: "Pequeña",
@@ -129,7 +129,7 @@ const productos = [
     },
     {
         id: 17,
-        titulo: "Torta17",
+        titulo: "Torta cuadrada De Chocolate y frutilla pequeña",
         imagen: "../pagina web/IMG/TortaCuadradaPequeña5.jpg",
         forma: "Cuadrada",
         tamanio: "Pequeña",
@@ -137,7 +137,7 @@ const productos = [
     },
     {
         id: 18,
-        titulo: "Torta18",
+        titulo: "Torta cuadrada De vainilla pequeña",
         imagen: "../pagina web/IMG/TortaCuadradaPequeña6.jpg",
         forma: "Cuadrada",
         tamanio: "Pequeña",
@@ -237,4 +237,5 @@ function agregarAlCarrito(e) {
 function actualizarNumerito() {
     let newNumerito = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
     numerito.innerText = newNumerito;
+
 }
