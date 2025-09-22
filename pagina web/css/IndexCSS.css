@@ -1,0 +1,139 @@
+  
+  body {
+  font-family: 'Lato', sans-serif;
+  background-color: #FFF5E1;
+  color: #5D4037;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  background: linear-gradient( #8B4513, #5D4037);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.nombre-empresa {
+  font-family: 'Pacifico', cursive;
+  font-size: 1.5em;
+}
+
+/* Navegación */
+nav {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Carrito numerito */
+.numerito {
+  background: #FFC0CB;
+  color: #5D4037;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.9em;
+  margin-left: 3px;
+}
+
+/* Bloque principal */
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.titulo-home {
+  font-family: 'Pacifico', cursive;
+  color: #5D4037;
+  font-size: 2.5em;
+}
+
+.subtitulo {
+  margin-top: 10px;
+  font-size: 1.2em;
+  font-style: italic;
+}
+
+.imagen-home img {
+  max-width: 350px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+/* Botón */
+.btn-catalogo {
+  background: #FFC0CB;
+  color: #5D4037;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 20px;
+  transition: background 0.3s;
+}
+
+.btn-catalogo:hover {
+  background: #ff9bb5;
+}
+
+/* Productos destacados */
+.productos-destacados {
+  max-width: 1000px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.titulo-destacados {
+  font-family: 'Pacifico', cursive;
+  color: #8B4513;
+  margin-bottom: 20px;
+}
+
+.cont-productos-destacados {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background: #8B4513;
+  color: white;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+  

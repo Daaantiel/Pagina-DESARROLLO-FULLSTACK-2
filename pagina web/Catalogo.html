@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalogo - Pastelería Mil Sabores</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/CatalogoCSS.css">
+
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="IMG/LogoPateleria.jpeg" alt="Logo de Pastelería Mil Sabores">
+      <h2 class="nombre-empresa">Pastelería Mil Sabores</h2>
+    </div>
+
+    <nav class="nav-main">
+      <a href="Index.html">Inicio</a>
+      <a href="Catalogo.html">Productos</a>
+      <a href="Blog.html">Blog</a>
+      <a href="#contacto">Contáctanos</a>
+    </nav>
+
+    <nav class="nav-login">
+      <a href="carrito.html"><i class='bx bx-cart'></i><span id="numerito" class="numerito">0</span></a>
+      <a href="NuevoLogin.html">Iniciar Sesion</a>
+      <a href="NuevoRegistro.html">Registrarse</a>
+    </nav>
+    
+    <script src="js/navUsuario.js"></script>
+  </header>
+
+
+  <div class="container">
+    <aside class="filtros">
+      <h3>Filtrar por tamaño</h3>
+      <label>
+        <input type="checkbox" class="botones-filtro" data-tamanio="Grande">
+        Tortas Grandes
+      </label><br>
+
+      <label>
+        <input type="checkbox" class="botones-filtro" data-tamanio="Pequeña">
+        Tortas Pequeñas
+      </label>
+
+      <h3>Filtrar por forma</h3>
+      <label>
+        <input type="checkbox" class="botones-filtro" data-forma="Circular">
+        Circulares
+      </label><br>
+
+      <label>
+        <input type="checkbox" class="botones-filtro" data-forma="Cuadrada">
+        Cuadradas
+      </label>
+
+      <button id="btn-limpiar">Quitar filtros</button>
+    </aside>
+
+    <main>
+      <h2 class="titulo-catalogo">Catalogo de Productos</h2>
+      <div id="contenedor-p" class="contenedor-productos">
+      </div>
+    </main>
+  </div>
+  
+  <div class="producto">
+    <h3>Productos Relacionados</h3>  
+    <a href="DetalleProducto.html">
+    <img class="producto-imagen" src="IMG/TortaCircular1.jpg" alt="Torta 1">
+    </a>
+    <div class="producto-informacion">
+    <h3 class="producto-titulo">Torta 1</h3>
+    <p class="producto-precio">$18200 c/u</p>
+    <button class="producto-agregar" id="1">Agregar</button>
+    </div>
+  </div>
+  
+  <footer id="contacto">
+    <p>📍 Dirección: Concepcion, Chile</p>
+    <p>📞 Teléfono: +56 9 7321 4022</p>
+    <p>© 2025 Pasteleria Mil Sabores - Todos los derechos reservados al creador de la pagina :D</p>
+  </footer>
+
+  <script src="../pagina web/js/Catalogojs.js" defer></script>
+
+</body>
+
+</html>
+
+
+
