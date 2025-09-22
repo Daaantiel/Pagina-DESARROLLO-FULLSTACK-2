@@ -2,7 +2,7 @@
    ESTILOS GENERALES DEL BODY
    =========================== */
 body {
-  font-family: 'Lato', sans-serif; /* Fuente principal legible */
+  font-family: 'Lato', sans-serif; /* Fuente principal del sitio */
   background-color: #FFF5E1; /* Fondo color crema claro */
   color: #5D4037; /* Color de texto cafe oscuro */
   margin: 0; /* Sin margen por defecto */
@@ -150,4 +150,5 @@ footer {
 }
 
   
+
 
