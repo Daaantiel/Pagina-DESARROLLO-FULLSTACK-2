@@ -6,10 +6,9 @@
     <title>Detalle producto - Pastelería Mil Sabores</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../pagina web/css/DetalleProducto.css">
-
-
 </head>
 <body>
+   <!-- Header con logo y navegación -->
    <header>
     <div class="logo">
       <img src="../pagina web/IMG/LogoPateleria.jpeg" alt="logo">
@@ -21,13 +20,18 @@
       <a href="Blog.html">Blog</a>
       <a href="#contacto">Contáctanos</a>
     </nav>
+    <!-- Login dinámico según usuario -->
     <nav id="nav-login" class="nav-login"></nav>
   </header>
 
+  <!-- Contenedor principal del detalle del producto -->
   <main>
-    <div id="contenedor-d" class="contenedor-producto-detalle"></div>
+    <div id="contenedor-d" class="contenedor-producto-detalle">
+      <!-- El producto se carga dinámicamente desde detalleProducto.js -->
+    </div>
   </main>
 
+  <!-- Footer con productos relacionados -->
   <footer>
     <div class="detalles-productos-relacionados">
       <img src="../pagina web/IMG/TortaCircular1.jpg" alt="Relacionado">
@@ -36,6 +40,7 @@
     </div>
   </footer>
 
+  <!-- Script que carga y controla el detalle del producto -->
   <script src="../pagina web/js/detalleProducto.js" defer></script>
 </body>
 </html>
