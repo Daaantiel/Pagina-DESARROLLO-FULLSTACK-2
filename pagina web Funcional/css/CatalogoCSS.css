@@ -4,7 +4,7 @@
 body {
   font-family: 'Lato', sans-serif; /* Fuente principal */
   background-color: #FFF5E1; /* Fondo color crema */
-  color: #5D4037; /* Color de texto marrón oscuro */
+  color: #5D4037; /* Color de texto cafe oscuro */
   margin: 0; /* Sin margen por defecto */
   padding: 0; /* Sin padding por defecto */
 }
@@ -13,8 +13,8 @@ body {
    HEADER (ENCABEZADO)
    =========================== */
 header {
-  background: linear-gradient(#8B4513, #5D4037); /* Degradado marrón */
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+  background: linear-gradient(#8B4513, #5D4037); /* Degradado cafe */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Sombreado */
   color: white; /* Color de texto */
   padding: 15px; /* Espaciado interno */
   display: flex; /* Layout flexible */
@@ -100,7 +100,7 @@ nav a:hover {
 
 .filtros h3 {
   font-family: 'Pacifico', cursive; /* Fuente decorativa */
-  color: #8B4513; /* Marrón oscuro */
+  color: #8B4513; /* Cafe oscuro */
   margin-bottom: 10px; /* Separación inferior */
 }
 
@@ -112,7 +112,7 @@ nav a:hover {
 /* Botón limpiar filtros */
 #btn-limpiar {
   background: #FFC0CB; /* Fondo rosa */
-  color: #5D4037; /* Texto marrón */
+  color: #5D4037; /* Texto Cafe */
   border: none; /* Sin borde */
   padding: 8px 12px; /* Espaciado interno */
   border-radius: 12px; /* Bordes redondeados */
@@ -135,7 +135,7 @@ main {
 /* Título del catálogo */
 .titulo-catalogo {
   font-family: 'Pacifico', cursive; /* Fuente decorativa */
-  color: #8B4513; /* Marrón oscuro */
+  color: #8B4513; /* Cafe oscuro */
   text-align: center; /* Centrado */
   margin-bottom: 20px; /* Separación inferior */
 }
@@ -164,7 +164,7 @@ main {
 
 .producto h3 {
   font-family: 'Pacifico', cursive; /* Fuente decorativa */
-  color: #8B4513; /* Marrón oscuro */
+  color: #8B4513; /* Cafe oscuro */
   margin: 10px 0; /* Margen superior e inferior */
 }
 
@@ -174,7 +174,7 @@ main {
 
 .producto button {
   background: #FFC0CB; /* Fondo rosa */
-  color: #5D4037; /* Texto marrón */
+  color: #5D4037; /* Texto cafe */
   border: none; /* Sin borde */
   padding: 10px 15px; /* Espaciado interno */
   border-radius: 12px; /* Bordes redondeados */
@@ -191,8 +191,9 @@ main {
    =========================== */
 footer {
   text-align: center; /* Centrado */
-  background: #8B4513; /* Fondo marrón */
+  background: #8B4513; /* Fondo cafe */
   color: white; /* Texto blanco */
   padding: 20px; /* Espaciado interno */
   margin-top: 40px; /* Separación superior */
 }
+
