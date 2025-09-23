@@ -1,17 +1,10 @@
-//Sistema básico de gestión para la pastelería
 
-
-// Variables globales
 let productosAdmin = [...productos];//Copia local de productos para su respectivo uso
 
 // Inicializar
 //Busca verificar el acceso mas una carga de datos
 document.addEventListener('DOMContentLoaded', function() {
-    // Verificar acceso antes de inicializar
-    if (!verificarAccesoAdministrador()) {
-        return; // Si no tiene acceso, detener la ejecución
-    }
-    
+
     const productosGuardados = localStorage.getItem('productos-admin');//lee el local storage de productos guardados
     if (productosGuardados) {
         productosAdmin = JSON.parse(productosGuardados);
@@ -22,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }));
         guardarProductos(); // llama a la funcion de guardarProductos para sincronizar datos
     }
-    mostrarDashboard();//LLama a la funcion de mostrarDashboard para mostrar la interfaz
 });
 
 
@@ -249,7 +241,6 @@ function actualizarNavegacionActiva(idActivo) {
 
 // Función para generar la lista HTML de usuarios
 // Cada usuario tiene un botón para ver detalles y otro para eliminar (si no es admin)
-// Usa estilos modernos y colores para mejorar la apariencia
 // Conecta con las funciones verDetalleUsuario y eliminarUsuario
 function generarListaUsuarios(usuarios = null) {
     const listaUsuarios = usuarios || JSON.parse(localStorage.getItem('usuarios')) || [];//lee los usuarios del local storage si no se pasan como parámetro
@@ -282,12 +273,9 @@ function generarListaUsuarios(usuarios = null) {
     
     // Itera sobre los usuarios y genera una fila para cada uno
     listaUsuarios.forEach((usuario, index) => {
-        const categoria = obtenerCategoriaUsuario(usuario);//obtiene la categoría del usuario
-        const beneficios = obtenerBeneficiosUsuario(usuario);//obtiene los beneficios del usuario
-        // Formatea la fecha de registro
+        const categoria = obtenerCategoriaUsuario(usuario);
+        const beneficios = obtenerBeneficiosUsuario(usuario);
         const fechaRegistro = usuario.fechaRegistro ? new Date(usuario.fechaRegistro).toLocaleDateString('es-ES') : 'No disponible';
-        
-        // Genera la fila de la tabla con estilos y botones
         html += `
             <tr style="border-bottom: 1px solid #f0f0f0; ${index % 2 === 0 ? 'background: #fafafa;' : 'background: white;'} transition: all 0.3s ease;" 
                 onmouseover="this.style.background='#f5f5f5';" 
@@ -327,11 +315,7 @@ function generarListaUsuarios(usuarios = null) {
                 </td>
                 <td style="padding: 1rem; text-align: center;">
                     <div style="display: flex; gap: 0.5rem; justify-content: center;">
-                        <button onclick="verDetalleUsuario('${usuario.email}')" 
-                                style="background: #17a2b8; color: white; border: none; padding: 0.5rem; border-radius: 5px; cursor: pointer; display: flex; align-items: center; justify-content: center;"
-                                title="Ver detalle">
-                            <i class='bx bx-eye'></i>
-                        </button>
+                        <!-- Botón de ver detalle eliminado -->
                         <button onclick="editarUsuario('${usuario.email}')" 
                                 style="background: #ffc107; color: white; border: none; padding: 0.5rem; border-radius: 5px; cursor: pointer; display: flex; align-items: center; justify-content: center;"
                                 title="Editar usuario">
@@ -367,13 +351,10 @@ function generarListaUsuarios(usuarios = null) {
 // Devuelve un objeto con nombre, color e ícono según las propiedades del usuario
 //Lee las propiedades creadas por Registro.js
 function obtenerCategoriaUsuario(usuario) {
-    // Determina la categoría del usuario según sus propiedades
     if (usuario.esAdministrador) {
         return { nombre: 'Administrador', color: '#6f42c1', icono: '🛡️' };
     } else if (usuario.esDuocUC) {
         return { nombre: 'DuocUC', color: '#e83e8c', icono: '🎓' };
-    } else if (usuario.esMayorDe50) {
-        return { nombre: 'Senior', color: '#fd7e14', icono: '👴' };
     } else if (usuario.tieneDescuentoPromocional) {
         return { nombre: 'Promocional', color: '#20c997', icono: '🎁' };
     } else {
@@ -385,230 +366,30 @@ function obtenerCategoriaUsuario(usuario) {
 // Devuelve un array de objetos con texto y color para cada beneficio
 //Conexion con productos.js para descuentos
 function obtenerBeneficiosUsuario(usuario) {
-    const beneficios = [];//inicia el array de beneficios
-    
+    const beneficios = [];
     if (usuario.esAdministrador) {
         beneficios.push({ texto: 'Panel Admin', color: '#6f42c1' });
     }
-    
     if (usuario.esDuocUC && usuario.tortasGratis) {
         beneficios.push({ texto: 'Tortas Gratis', color: '#e83e8c' });
     }
-    
-    if (usuario.esMayorDe50) {
-        beneficios.push({ texto: '50% Descuento', color: '#fd7e14' });
-    }
-    
     if (usuario.tieneDescuentoPromocional) {
         beneficios.push({ 
-            texto: `${usuario.porcentajeDescuentoPromocional}% OFF`, 
+            texto: `10% OFF`, 
             color: '#20c997' 
         });
     }
-    
     if (beneficios.length === 0) {
         beneficios.push({ texto: 'Sin beneficios', color: '#6c757d' });
     }
-    
     return beneficios;
 }
 
-// Función para filtrar usuarios por tipo
-// Lee el valor del filtro y actualiza la lista de usuarios mostrada
-function filtrarUsuarios() {
-    const filtro = document.getElementById('filtroTipoUsuario').value;//lee el valor del filtro
-    const todosLosUsuarios = JSON.parse(localStorage.getItem('usuarios')) || [];//lee todos los usuarios del local storage
-    let usuariosFiltrados = [];//inicia el array de usuarios filtrados
-    
-    // Aplica el filtro según la selección
-    switch (filtro) {
-        case 'administradores':
-            usuariosFiltrados = todosLosUsuarios.filter(u => u.esAdministrador);
-            break;
-        case 'duocuc':
-            usuariosFiltrados = todosLosUsuarios.filter(u => u.esDuocUC);
-            break;
-        case 'mayores50':
-            usuariosFiltrados = todosLosUsuarios.filter(u => u.esMayorDe50);
-            break;
-        case 'promocionales':
-            usuariosFiltrados = todosLosUsuarios.filter(u => u.tieneDescuentoPromocional);
-            break;
-        case 'normales':
-            usuariosFiltrados = todosLosUsuarios.filter(u => 
-                !u.esAdministrador && !u.esDuocUC && !u.esMayorDe50 && !u.tieneDescuentoPromocional
-            );
-            break;
-        default:
-            usuariosFiltrados = todosLosUsuarios;
-    }
-    
-    const listaContainer = document.getElementById('lista-usuarios');//captura el contenedor de la lista de usuarios
-    
-    listaContainer.innerHTML = generarListaUsuarios(usuariosFiltrados);//llama a generarListaUsuarios con los usuarios filtrados
-}
-
-// Función para ver detalle de un usuario
-// Muestra un modal con información detallada del usuario seleccionado
-// Incluye beneficios, historial de compras y datos personales
-// Usa estilos modernos y colores para mejorar la apariencia
-//Conexion con historial-compras.js para mostrar las compras del usuario
-function verDetalleUsuario(email) {
-    const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];//lee los usuarios del local storage
-    const usuario = usuarios.find(u => u.email === email);//busca el usuario por email
-    
-    //verifica si el usuario existe
-    if (!usuario) {
-        alert('Usuario no encontrado');
-        return;
-    }
-    
-
-    const categoria = obtenerCategoriaUsuario(usuario);//obtiene la categoría del usuario
-    const beneficios = obtenerBeneficiosUsuario(usuario);//obtiene los beneficios del usuario
-    const fechaRegistro = usuario.fechaRegistro ? new Date(usuario.fechaRegistro).toLocaleDateString('es-ES', { 
-        year: 'numeric', 
-        month: 'long', 
-        day: 'numeric',
-        hour: '2-digit',
-        minute: '2-digit'
-    }) : 'No disponible'; //formatea la fecha de registro
-    
-    // Obtener historial de compras del usuario
-
-    //conexion con historial-compras.js
-    const historialCompras = JSON.parse(localStorage.getItem('historial-compras')) || [];//lee el historial de compras del local storage
-    const comprasUsuario = historialCompras.filter(compra => compra.emailUsuario === email);//filtra las compras del usuario
-    const totalGastado = comprasUsuario.reduce((total, compra) => total + compra.total, 0);//suma el total gastado por el usuario
-    
-    // Genera el HTML del detalle del usuario con estilos modernos
-    // Usa colores y tipografías agradables para mejorar la experiencia
-    // Incluye secciones para información personal, beneficios e historial de compras
-    
-    const detalleHTML = `
-        <div style="max-width: 600px; margin: 0 auto;">
-            <div style="text-align: center; margin-bottom: 2rem;">
-                <div style="width: 80px; height: 80px; background: ${categoria.color}; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 2rem; margin: 0 auto 1rem;">
-                    ${usuario.nombre.charAt(0).toUpperCase()}
-                </div>
-                <h2 style="color: #8B4513; margin: 0;">${usuario.nombre}</h2>
-                <p style="color: #666; margin: 0.5rem 0;">${usuario.email}</p>
-                <span style="background: ${categoria.color}; color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">
-                    ${categoria.icono} ${categoria.nombre}
-                </span>
-            </div>
-            
-            <div style="background: white; border-radius: 15px; padding: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 1.5rem;">
-                <h3 style="color: #8B4513; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
-                    <i class='bx bx-info-circle'></i>
-                    Información Personal
-                </h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
-                    <div>
-                        <strong>Edad:</strong><br>
-                        <span style="color: #666;">${usuario.edad} años</span>
-                    </div>
-                    <div>
-                        <strong>Fecha de Registro:</strong><br>
-                        <span style="color: #666;">${fechaRegistro}</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div style="background: white; border-radius: 15px; padding: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 1.5rem;">
-                <h3 style="color: #8B4513; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
-                    <i class='bx bx-gift'></i>
-                    Beneficios y Privilegios
-                </h3>
-                <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-                    ${beneficios.map(beneficio => 
-                        `<span style="background: ${beneficio.color}; color: white; padding: 0.5rem 1rem; border-radius: 15px; font-size: 0.9rem;">
-                            ${beneficio.texto}
-                        </span>`
-                    ).join('')}
-                </div>
-            </div>
-            
-            <div style="background: white; border-radius: 15px; padding: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 1.5rem;">
-                <h3 style="color: #8B4513; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
-                    <i class='bx bx-shopping-bag'></i>
-                    Historial de Compras
-                </h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin-bottom: 1rem;">
-                    <div style="text-align: center; padding: 1rem; background: #f8f9fa; border-radius: 10px;">
-                        <div style="font-size: 1.5rem; font-weight: bold; color: #28a745;">${comprasUsuario.length}</div>
-                        <div style="font-size: 0.9rem; color: #666;">Compras Realizadas</div>
-                    </div>
-                    <div style="text-align: center; padding: 1rem; background: #f8f9fa; border-radius: 10px;">
-                        <div style="font-size: 1.5rem; font-weight: bold; color: #17a2b8;">$${totalGastado.toLocaleString()}</div>
-                        <div style="font-size: 0.9rem; color: #666;">Total Gastado</div>
-                    </div>
-                </div>
-                ${comprasUsuario.length > 0 ? `
-                    <div style="max-height: 200px; overflow-y: auto; border: 1px solid #e9ecef; border-radius: 8px;">
-                        ${comprasUsuario.slice(0, 5).map(compra => `
-                            <div style="padding: 0.8rem; border-bottom: 1px solid #f1f3f4; display: flex; justify-content: space-between; align-items: center;">
-                                <div>
-                                    <div style="font-weight: 600; color: #333;">Orden #${compra.numeroOrden}</div>
-                                    <div style="font-size: 0.85rem; color: #666;">${compra.fechaLegible}</div>
-                                </div>
-                                <div style="text-align: right;">
-                                    <div style="font-weight: 600; color: #28a745;">$${compra.total.toLocaleString()}</div>
-                                    <div style="font-size: 0.85rem; color: #666;">${compra.productos.length} productos</div>
-                                </div>
-                            </div>
-                        `).join('')}
-                    </div>
-                ` : `
-                    <p style="text-align: center; color: #666; padding: 2rem;">
-                        Este usuario aún no ha realizado compras
-                    </p>
-                `}
-            </div>
-            
-            <div style="text-align: center; gap: 1rem; display: flex; justify-content: center; flex-wrap: wrap;">
-                <button onclick="editarUsuario('${usuario.email}')" 
-                        style="background: #ffc107; color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 8px; cursor: pointer; font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">
-                    <i class='bx bx-edit'></i>
-                    Editar Usuario
-                </button>
-                ${!usuario.esAdministrador ? `
-                    <button onclick="eliminarUsuario('${usuario.email}')" 
-                            style="background: #dc3545; color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 8px; cursor: pointer; font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">
-                        <i class='bx bx-trash'></i>
-                        Eliminar Usuario
-                    </button>
-                ` : ''}
-                <button onclick="mostrarGestionUsuarios()" 
-                        style="background: #6c757d; color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 8px; cursor: pointer; font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">
-                    <i class='bx bx-arrow-back'></i>
-                    Volver a la Lista
-                </button>
-            </div>
-        </div>
-    `;
-    
-    // Mostrar el detalle en el contenido principal
-    const contenido = document.getElementById('contenido-principal');//modificara el contenido principal del html
-    contenido.innerHTML = `
-        <h1 class="titulo-administrador">👤 Detalle de Usuario</h1>
-        <p class="subtitulo">Información completa del usuario seleccionado</p>
-        <div style="background: white; border-radius: 15px; padding: 2rem; margin-top: 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-            ${detalleHTML}
-        </div>
-    `;
-}
 
 // Función para eliminar un usuario
 function eliminarUsuario(email) {
     const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];//lee los usuarios del local storage
     const usuario = usuarios.find(u => u.email === email);//busca el usuario por email
-    
-    //verifica si el usuario existe
-    if (!usuario) {
-        alert('Usuario no encontrado');
-        return;
-    }
     
     if (usuario.esAdministrador) {
         alert('❌ No se puede eliminar a un administrador');
@@ -688,12 +469,6 @@ function mostrarFormularioUsuario(email = null) {
                 </div>
                 <div style="margin-bottom: 15px;">
                     <label>
-                        <input type="checkbox" id="esMayorDe50" ${usuario?.esMayorDe50 ? 'checked' : ''}>
-                        Es mayor de 50 años
-                    </label>
-                </div>
-                <div style="margin-bottom: 15px;">
-                    <label>
                         <input type="checkbox" id="tieneDescuentoPromocional" ${usuario?.tieneDescuentoPromocional ? 'checked' : ''}>
                         Tiene descuento promocional
                     </label>
@@ -728,9 +503,7 @@ function guardarUsuario(emailOriginal = null) {
     const edad = parseInt(document.getElementById('edad').value);
     const esAdministrador = document.getElementById('esAdministrador').checked;
     const esDuocUC = document.getElementById('esDuocUC').checked;
-    const esMayorDe50 = document.getElementById('esMayorDe50').checked;
     const tieneDescuentoPromocional = document.getElementById('tieneDescuentoPromocional').checked;
-    const porcentajeDescuentoPromocional = parseInt(document.getElementById('porcentajeDescuentoPromocional').value) || 0;
     
     const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
     
@@ -743,9 +516,7 @@ function guardarUsuario(emailOriginal = null) {
             edad, 
             esAdministrador, 
             esDuocUC, 
-            esMayorDe50, 
-            tieneDescuentoPromocional, 
-            porcentajeDescuentoPromocional,
+            tieneDescuentoPromocional,
             tortasGratis: esDuocUC
         };
         alert('✅ Usuario actualizado correctamente');
@@ -766,9 +537,7 @@ function guardarUsuario(emailOriginal = null) {
             password,
             esAdministrador,
             esDuocUC,
-            esMayorDe50,
             tieneDescuentoPromocional,
-            porcentajeDescuentoPromocional,
             tortasGratis: esDuocUC,
             fechaRegistro: new Date().toISOString()
         };
@@ -780,4 +549,3 @@ function guardarUsuario(emailOriginal = null) {
     localStorage.setItem('usuarios', JSON.stringify(usuarios));
     mostrarGestionUsuarios();
 }
-
