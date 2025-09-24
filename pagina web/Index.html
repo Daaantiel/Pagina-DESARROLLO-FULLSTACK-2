@@ -12,40 +12,44 @@
 <body>
 
   <header>
+
+    <nav class="nav-login">
+      <div>
+      <a href="NuevoLogin.html">Iniciar Sesión</a>
+      <a href="">/</a>
+      <a href="NuevoRegistro.html">Registrarse</a>
+      </div>
+    </nav>
+
     <div class="logo">
       <img src="IMG/LogoPateleria.jpeg" alt="Logo de Pasteleria Mil Sabores">
       <h2 class="nombre-empresa">Pastelería Mil Sabores</h2>
     </div>
-    
+
     <nav class="nav-main">
-      <a href="Index.html">Inicio</a>
       <a href="Catalogo.html">Productos</a>
       <a href="Blog.html">Blog</a>
       <a href="#contacto">Contáctanos</a>
     </nav>
-    <nav class="nav-login">
-      <a href="carrito.html"><i class='bx bx-cart'></i><span class="numerito">0</span></a>
-      <a href="NuevoLogin.html">Iniciar Sesión</a>
-      <a href="NuevoRegistro.html">Registrarse</a>
-    </nav>
-
+    
       <script src="js/navUsuario.js"></script>
   </header>
 
-  <section class="main container my-5">
-    <div class="row align-items-center">
-      <div class="col-md-6 text-center text-md-start">
-        <h1 class="titulo-home"> Pasteleria Mil Sabores </h1>
-        <p class="subtitulo">Somos una pastelería familiar y nos dedicamos a entregar productos de excelente calidad. El trabajo bien hecho, la utilización de los mejores ingredientes y el sabor a cariño en nuestros productos son los sellos que nos hacen únicos e inolvidables.</p>
-        <button class="btn btn-primary" onclick="location.href='Catalogo.html'">Ver productos</button>
-      </div>
-      <div class="col-md-6 text-center">
-        <img src="IMG/LogoPateleria.jpeg" class="img-fluid rounded" alt="Torta decorada de la pastelería">
-      </div>
+  <section class="main-bloque">
+    <div class="bienvenida">
+      <h1 class="titulo-home">Pastelería Mil Sabores</h1>
+      <p class="subtitulo">Somos una pastelería familiar y nos dedicamos a entregar productos de excelente calidad.<br>El trabajo bien hecho, la utilización de los mejores ingredientes y el sabor a cariño en nuestros productos son los sellos que nos hacen únicos e inolvidables.</p>
+    </div>
+    <div class="imagen-home">
+      <img src="IMG/LogoPateleria.jpeg" alt="Torta decorada de la pastelería">
+    </div>
+    <div class="ir-catalogo">
+      <button class="btn-catalogo" onclick="location.href='Catalogo.html'">Ver productos</button>
     </div>
   </section>
 
   <section class="productos-destacados">
+    <div class="separador"></div>
     <h2 class="titulo-destacados">✨ Productos Destacados</h2>
     <div id="contenedor-pd" class="cont-productos-destacados"></div>
   </section>
