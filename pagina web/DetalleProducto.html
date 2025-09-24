@@ -6,36 +6,42 @@
     <title>Detalle producto - Pastelería Mil Sabores</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/DetalleProducto.css">
-
-
 </head>
 <body>
+    <!-- Header con logo y navegación -->
     <header>
-    <div class="logo">
-      <img src="IMG/LogoPateleria.jpeg" alt="logo">
-      <h2 class="nombre-empresa">Pastelería Mil Sabores</h2>
-    </div>
-    <nav class="nav-main">
-      <a href="Index.html">Inicio</a>
-      <a href="Catalogo.html">Productos</a>
-      <a href="Blog.html">Blog</a>
-      <a href="#contacto">Contáctanos</a>
-    </nav>
-    <nav id="nav-login" class="nav-login"></nav>
-  </header>
+        <div class="logo">
+        <img src="../pagina web/IMG/LogoPateleria.jpeg" alt="logo">
+        <h2 class="nombre-empresa">Pastelería Mil Sabores</h2>
+        </div>
+        <nav class="nav-main">
+        <a href="Index.html">Inicio</a>
+        <a href="Catalogo.html">Productos</a>
+        <a href="Blog.html">Blog</a>
+        <a href="#contacto">Contáctanos</a>
+        </nav>
+        <!-- Login dinámico según usuario -->
+        <nav id="nav-login" class="nav-login"></nav>
+    </header>
 
-  <main>
-    <div id="contenedor-d" class="contenedor-producto-detalle"></div>
-  </main>
+    <!-- Contenedor principal del detalle del producto -->
+    <main>
+        <div id="contenedor-d" class="contenedor-producto-detalle">
+        <!-- El producto se carga dinámicamente desde detalleProducto.js -->
+        </div>
+    </main>
 
-  <footer>
-    <div class="detalles-productos-relacionados">
-      <img src="IMG/TortaCircular1.jpg" alt="Relacionado">
-      <img src="IMG/TortaCircular2.jpg" alt="Relacionado">
-      <img src="IMG/TortaCircular5.jpg" alt="Relacionado">
-    </div>
-  </footer>
+    <!-- Footer con productos relacionados -->
+    <footer>
+        <h3 style="color: white; text-align: center; margin-bottom: 2rem; font-family: 'Pacifico', cursive;">Productos Relacionados</h3>
+        <div class="detalles-productos-relacionados">
+        <img src="../pagina web/IMG/TortaCircular1.jpg" alt="Relacionado">
+        <img src="../pagina web/IMG/TortaCircular3.jpg" alt="Relacionado">
+        <img src="../pagina web/IMG/TortaCircular5.jpg" alt="Relacionado">
+        </div>
+    </footer>
 
-  <script src="js/detalleProducto.js" defer></script>
+    <!-- Script que carga y controla el detalle del producto -->
+    <script src="js/detalleProd.js" defer></script>
 </body>
 </html>
