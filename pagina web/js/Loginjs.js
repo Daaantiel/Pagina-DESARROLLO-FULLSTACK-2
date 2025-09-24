@@ -28,7 +28,11 @@ form.addEventListener("submit", (e) => {
 
     if (usuarioGuardado && usuarioGuardado.correo === correo && usuarioGuardado.password === password) {
         alert(`✅ Bienvenido, ${usuarioGuardado.nombre}!`);
-        window.location.href = "Index.html"; 
+        if (correo.includes('admin')) {
+            window.location.href = "administrador.html";
+        } else {
+            window.location.href = "Index.html";
+        }
     } else {
         errores.textContent = "Correo o contraseña incorrectos.";
     }
