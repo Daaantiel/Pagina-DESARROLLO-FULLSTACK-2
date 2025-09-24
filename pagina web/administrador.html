@@ -14,19 +14,21 @@
 <body>
     <aside>
         <div class="admin-header">
-            <h1>🍰 Admin </h1>
+            <h1>🍰 Admin</h1>
             <p>Pastelería Mil Sabores</p>
         </div>
-        <nav class="nav-administrador">
-            <a href="#" onclick="mostrarGestionProductos()" class="nav-link" id="nav-productos">
-                <i class='bx bx-cake'></i>
-                Gestión de Productos
-            </a>
-            <a href="#" onclick="mostrarGestionUsuarios()" class="nav-link" id="nav-usuarios">
-                <i class='bx bx-users'></i>
-                Gestión de Usuarios
-            </a>
-        </nav>
+        <div class="nav-administrador-contenedor">
+            <nav class="nav-administrador">
+                <a href="#" onclick="mostrarGestionProductos()" class="nav-link" id="nav-productos">
+                    <span class="icono-nav"><i class='bx bx-cake'></i></span>
+                    <span class="texto-nav">Gestión de Productos</span>
+                </a>
+                <a href="#" onclick="mostrarGestionUsuarios()" class="nav-link" id="nav-usuarios">
+                    <span class="icono-nav"><i class='bx bx-users'></i></span>
+                    <span class="texto-nav">Gestión de Usuarios</span>
+                </a>
+            </nav>
+        </div>
     </aside>
 
     <main>
