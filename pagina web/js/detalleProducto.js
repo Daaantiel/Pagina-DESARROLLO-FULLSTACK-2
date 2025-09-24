@@ -1,72 +1,80 @@
+/*Listado de productos destacados*/
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Obtener parámetros de la URL (para identificar el producto)
-    const params = new URLSearchParams(window.location.search);
-    const idProducto = params.get('id');
+const productos = [
+    {
+        id:1,
+        titulo: "Torta Circula Grande de Pistacho",
+        imagen : "../pagina web/IMG/TortaCircular1.jpg",
+        forma : "Circulares",
+        tamanio : "Grande",
+        precio : 18200,
+        descripcion: "Deliciosa torta de pistacho con capas de bizcocho esponjoso y crema suave, decorada con trozos de pistacho y un toque de chocolate blanco."
+    },
+    {
+        id:2,
+        titulo: "Torta Circula Grande de Arandano",
+        imagen : "../pagina web/IMG/TortaCircular2.jpg",
+        forma : "Circulares",
+        tamanio :"Grande",
+        precio : 15500,
+        descripcion: "Exquisita torta de arándanos frescos con bizcocho húmedo y relleno cremoso, perfecta para cualquier ocasión especial."
 
-    // Seleccionar el contenedor donde se mostrará el detalle del producto
-    const contenedorDetalle = document.querySelector("#contenedor-d");
+    },
+    {
+        id:3,
+        titulo: "Torta Circula Grande de Chocolate",
+        imagen : "../pagina web/IMG/TortaCircular3.jpg",
+        forma : "Circulares",
+        tamanio :"Grande",
+        precio : 30000,
+        descripcion: "Irresistible torta de chocolate con capas de bizcocho rico y denso, rellena de ganache de chocolate y cubierta con glaseado brillante."
 
-    // Obtener lista de productos y carrito desde localStorage (si existe)
-    const productos = JSON.parse(localStorage.getItem("productos")) || [];
-    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    },
+    {
+        id:4,
+        titulo: "Torta Circula Grande de Fresas",
+        imagen : "../pagina web/IMG/TortaCircular4.jpg",
+        forma : "Circulares",
+        tamanio :"Grande",
+        precio : 40000,
+        descripcion: "Deliciosa torta de fresas frescas con bizcocho esponjoso y crema batida, decorada con fresas enteras y un toque de menta."
 
-    // Buscar el producto que coincide con el id de la URL
-    const producto = productos.find(p => p.id == idProducto);
-
-    if (producto) {
-        // Crear un div para mostrar los detalles del producto
-        const div = document.createElement("div");
-        div.classList.add("producto-detalle");
-        div.innerHTML = `
-            <div class="contenedor-imagen-detalle">
-                <img src="${producto.imagen}" alt="${producto.titulo}">
-            </div>
-            <div class="contenedor-detalle-p">
-                <h2>${producto.titulo}</h2>
-                <div class="precio-producto">$${producto.precio.toLocaleString()}</div>
-                
-                <div class="info-adicional">
-                    <div class="info-item">
-                        <strong>Forma</strong>
-                        <span>${producto.forma}</span>
-                    </div>
-                    <div class="info-item">
-                        <strong>Tamaño</strong>
-                        <span>${producto.tamanio}</span>
-                    </div>
-                </div>
-                
-                <div class="descripcion-producto">
-                    ${producto.descripcion }
-                </div>
-                
-            </div>
-        `;
-        contenedorDetalle.append(div);
-
-        // Escuchar el evento click del botón "Agregar al carrito"
-        document.getElementById("btn-agregar").addEventListener("click", () => {
-            // Verificar si el producto ya existe en el carrito
-            const existe = carrito.find(p => p.id == producto.id);
-            if (existe) {
-                // Si existe, incrementar la cantidad
-                existe.cantidad++;
-            } else {
-                // Si no existe, agregarlo con cantidad 1
-                carrito.push({...producto, cantidad: 1});
-            }
-            // Guardar el carrito actualizado en localStorage
-            localStorage.setItem("carrito", JSON.stringify(carrito));
-            actualizarNumerito(); // Actualizar indicador de cantidad en el carrito
-            alert(`${producto.titulo} se agregó al carrito`);
-        });
-    } else {
-        // Mostrar mensaje si el producto no se encuentra
-        contenedorDetalle.innerHTML = "<p>Producto no encontrado.</p>";
     }
 
-    // Actualizar indicador de cantidad en el carrito al cargar la página
-    actualizarNumerito();
-});
+];
 
+const contenedorProductosDestacados = document.querySelector("#contenedor-pd");
+
+/* Función para cargar los productos en el contenedor */
+function cargarProductos(lista = productos) {
+    // Limpiar contenedor antes de cargar los productos
+    contenedorProductosDestacados.innerHTML = "";
+
+    // Recorrer cada producto y crear su estructura HTML
+    lista.forEach(producto => {
+        const div = document.createElement("div");
+        div.classList.add("producto");
+
+        div.innerHTML = `
+            <img class="producto-imagen" src="${producto.imagen}" alt="${producto.titulo}">
+            <div class="producto-informacion">
+                <h3 class="producto-titulo">${producto.titulo}</h3>
+                <p class="producto-precio">$${producto.precio} c/u</p>
+                <button class="producto-pagina" id="${producto.id}" onclick="verDetalle(${producto.id})">Ver detalle</button>
+            </div>
+        `;
+        // Agregar el producto al contenedor
+        contenedorProductosDestacados.append(div);
+    });
+}
+
+// Llamar a la función para mostrar los productos al cargar la página
+cargarProductos();
+
+// Guardar productos en localStorage para que detalleProducto.js pueda acceder a ellos
+localStorage.setItem("productos", JSON.stringify(productos));
+
+// Función para redirigir al detalle del producto
+function verDetalle(idProducto) {
+    window.location.href = `detalleProd.html?id=${idProducto}`;
+}
