@@ -1,5 +1,5 @@
   
-  body {
+body {
   font-family: 'Lato', sans-serif;
   background-color: #FFF5E1;
   color: #5D4037;
@@ -35,7 +35,6 @@ header {
   font-size: 1.5em;
 }
 
-/* Navegación */
 nav {
   display: flex;
   gap: 15px;
@@ -62,36 +61,55 @@ nav a:hover {
   margin-left: 3px;
 }
 
-/* Bloque principal */
-.main {
+
+/* Nueva distribución para el index */
+.main-bloque {
+  max-width: 700px;
+  margin: 40px auto 0 auto;
+  padding: 30px 20px 10px 20px;
+  background: #fff8f0;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(139, 69, 19, 0.08);
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 20px;
-  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.bienvenida {
+  text-align: center;
 }
 
 .titulo-home {
   font-family: 'Pacifico', cursive;
   color: #5D4037;
-  font-size: 2.5em;
+  font-size: 2.2em;
+  margin-bottom: 0.5em;
 }
 
 .subtitulo {
   margin-top: 10px;
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-style: italic;
+  color: #8B4513;
 }
 
+.imagen-home {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
 .imagen-home img {
-  max-width: 350px;
+  max-width: 220px;
   border-radius: 15px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.13);
 }
 
-/* Botón */
+.ir-catalogo {
+  margin-top: 10px;
+  text-align: center;
+}
+
 .btn-catalogo {
   background: #FFC0CB;
   color: #5D4037;
@@ -100,12 +118,15 @@ nav a:hover {
   border-radius: 15px;
   cursor: pointer;
   font-weight: bold;
-  margin-top: 20px;
-  transition: background 0.3s;
+  margin-top: 10px;
 }
-
 .btn-catalogo:hover {
   background: #ff9bb5;
+}
+
+.separador {
+  width: 100%;
+  height: 30px;
 }
 
 /* Productos destacados */
