@@ -1,6 +1,5 @@
-  
 
-  body {
+body {
   font-family: 'Lato', sans-serif;
   background-color: #FFF5E1;
   color: #5D4037;
@@ -31,11 +30,11 @@ header {
 }
 
 .nombre-empresa {
+  color: white;
   font-family: 'Pacifico', cursive;
   font-size: 1.5em;
 }
 
-/* Navegación */
 nav {
   display: flex;
   gap: 15px;
@@ -51,7 +50,6 @@ nav a {
 nav a:hover {
   text-decoration: underline;
 }
-
 a {
     text-decoration: none;
     color: #FFC0CB;
